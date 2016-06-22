@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<model ref="r:20f26f41-365a-4e7b-8c19-51fed637bb95(CloudRename.constraints)">
+<model ref="r:20f26f41-365a-4e7b-8c19-51fed637bb95(org.campagnelab.cloud.interactive.constraints)">
   <persistence version="9" />
   <languages>
     <use id="3f4bc5f5-c6c1-4a28-8b10-c83066ffa4a1" name="jetbrains.mps.lang.constraints" version="0" />

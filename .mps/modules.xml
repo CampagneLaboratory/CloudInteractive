@@ -2,7 +2,7 @@
 <project version="4">
   <component name="MPSProject">
     <projectModules>
-      <modulePath path="$PROJECT_DIR$/languages/CloudRenameLang/CloudRename.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/CloudRenameLang/org.campagnelab.cloud.interactive.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/NewSolution/NewSolution.msd" folder="" />
     </projectModules>
   </component>

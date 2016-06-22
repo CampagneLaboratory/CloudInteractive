@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<model ref="r:e33dc7a0-fab0-4a78-9eaa-74e3c988e79e(CloudRename.behavior)">
+<model ref="r:e33dc7a0-fab0-4a78-9eaa-74e3c988e79e(org.campagnelab.cloud.interactive.behavior)">
   <persistence version="9" />
   <languages>
     <use id="af65afd8-f0dd-4942-87d9-63a55f2a9db1" name="jetbrains.mps.lang.behavior" version="0" />
@@ -10,7 +10,7 @@
     <import index="9aef" ref="d24699a3-e8c4-48e6-93dd-88fb4f2f1c78/java:org.campagnelab.rename(CloudRename/)" />
     <import index="y5b6" ref="d24699a3-e8c4-48e6-93dd-88fb4f2f1c78/java:com.google.api.services.storage.model(CloudRename/)" />
     <import index="8btz" ref="d24699a3-e8c4-48e6-93dd-88fb4f2f1c78/java:com.google.api.services.storage(CloudRename/)" />
-    <import index="i5dl" ref="r:c77d0859-5cf2-4017-8ab4-0bb8dac6a04f(CloudRename.structure)" implicit="true" />
+    <import index="i5dl" ref="r:c77d0859-5cf2-4017-8ab4-0bb8dac6a04f(org.campagnelab.cloud.interactive.structure)" implicit="true" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
     <import index="440p" ref="r:a6c7903c-0b83-4bcf-8e49-8f150f2412bf(org.campagnelab.nyosh.interactive.structure)" implicit="true" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
