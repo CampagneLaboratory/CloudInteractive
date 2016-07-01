@@ -29,6 +29,39 @@
     <import index="qnes" ref="r:2f60864f-994c-4413-b324-244fab1c0017(org.campagnelab.nyosh.functions.behavior)" />
     <import index="piqp" ref="r:dbc34bfe-035e-40e7-907e-8abb3a638383(org.campagnelab.nyosh.gstring.behavior)" />
   </imports>
-  <registry />
+  <registry>
+    <language id="66f96b90-b2af-4ce4-92ca-dc0e9d7e2b43" name="org.campagnelab.nyosh.interactive">
+      <concept id="5575801756724620905" name="org.campagnelab.nyosh.interactive.structure.File" flags="ng" index="2EWdhe">
+        <property id="5575801756724621394" name="fullPath" index="2EWcDP" />
+      </concept>
+    </language>
+    <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
+      <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
+        <property id="1169194664001" name="name" index="TrG5h" />
+      </concept>
+    </language>
+    <language id="d24699a3-e8c4-48e6-93dd-88fb4f2f1c78" name="org.campagnelab.cloud.interactive">
+      <concept id="8948852386812892741" name="org.campagnelab.cloud.interactive.structure.FileOnCloud" flags="ng" index="1jkMeg">
+        <property id="774347578126010151" name="subdirectory" index="cnoSy" />
+        <property id="1401537737891124931" name="invalid" index="2dflnA" />
+      </concept>
+      <concept id="8404173470613077394" name="org.campagnelab.cloud.interactive.structure.CloudFolder" flags="ng" index="3Y1IaG">
+        <property id="3214350917729639320" name="valid" index="Q8B2T" />
+        <property id="8404173470613095980" name="URL" index="3Y1_$i" />
+        <child id="8948852386812892739" name="files" index="1jkMem" />
+      </concept>
+    </language>
+  </registry>
+  <node concept="3Y1IaG" id="4ETRbBYgaMe">
+    <property role="Q8B2T" value="true" />
+    <property role="3Y1_$i" value="gs://wcmc_nw_training_data/test" />
+    <property role="TrG5h" value="cloud folder holder" />
+    <node concept="1jkMeg" id="4ETRbBYgaMv" role="1jkMem">
+      <property role="2dflnA" value="false" />
+      <property role="cnoSy" value="test/" />
+      <property role="TrG5h" value="helloWorld.txt" />
+      <property role="2EWcDP" value="gs://wcmc_nw_training_data/test" />
+    </node>
+  </node>
 </model>
 

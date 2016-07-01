@@ -78,6 +78,7 @@
       <concept id="1219418625346" name="jetbrains.mps.lang.editor.structure.IStyleContainer" flags="ng" index="3F0Thp">
         <child id="1219418656006" name="styleItem" index="3F10Kt" />
       </concept>
+      <concept id="1073389882823" name="jetbrains.mps.lang.editor.structure.CellModel_RefNode" flags="sg" stub="730538219795960754" index="3F1sOY" />
       <concept id="1073390211982" name="jetbrains.mps.lang.editor.structure.CellModel_RefNodeList" flags="sg" stub="2794558372793454595" index="3F2HdR">
         <reference id="1173177718857" name="elementActionMap" index="APP_o" />
       </concept>
@@ -526,6 +527,12 @@
       </node>
       <node concept="2iRfu4" id="5uN7hWa6_Dr" role="2iSdaV" />
       <node concept="2V7CMv" id="7wWmVpyjHyN" role="3F10Kt" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="qlLyUnynAp">
+    <ref role="1XX52x" to="k6yc:qlLyUnyn5Y" resolve="NewCloudFileLiteral" />
+    <node concept="3F1sOY" id="4ETRbBYeWnF" role="2wV5jI">
+      <ref role="1NtTu8" to="k6yc:4ETRbBYeWnC" />
     </node>
   </node>
 </model>

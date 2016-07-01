@@ -25,10 +25,13 @@
   </languages>
   <imports>
     <import index="440p" ref="r:a6c7903c-0b83-4bcf-8e49-8f150f2412bf(org.campagnelab.nyosh.interactive.structure)" />
+    <import index="iowz" ref="r:0583c0e9-dc14-4152-95a4-93036dce931b(org.campagnelab.workflow.structure)" />
   </imports>
   <registry>
     <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure">
       <concept id="1169125787135" name="jetbrains.mps.lang.structure.structure.AbstractConceptDeclaration" flags="ig" index="PkWjJ">
+        <property id="4628067390765907488" name="conceptShortDescription" index="R4oN_" />
+        <property id="5092175715804935370" name="conceptAlias" index="34LRSv" />
         <property id="1587916991969465369" name="conceptId" index="1pbfSe" />
         <child id="1071489727083" name="linkDeclaration" index="1TKVEi" />
       </concept>
@@ -67,6 +70,18 @@
     <property role="1pbfSe" value="1214761147" />
     <property role="TrG5h" value="CloudPathPart" />
     <ref role="1TJDcQ" to="440p:7wWmVpyc6Pq" resolve="PathPart" />
+  </node>
+  <node concept="1TIwiD" id="qlLyUnyn5Y">
+    <property role="1pbfSe" value="1642121300" />
+    <property role="TrG5h" value="NewCloudFileLiteral" />
+    <property role="34LRSv" value="cloud file" />
+    <property role="R4oN_" value="Cloud file path literal" />
+    <ref role="1TJDcQ" to="iowz:3aOvEIt8nXt" resolve="NewChannelInitializerExpression" />
+    <node concept="1TJgyj" id="4ETRbBYeWnC" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="URL" />
+      <ref role="20lvS9" node="5UDj3ODq8eo" resolve="CloudInteractivePath" />
+    </node>
   </node>
 </model>
 
