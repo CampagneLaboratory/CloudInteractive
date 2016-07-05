@@ -12,9 +12,17 @@
     <use id="ed6d7656-532c-4bc2-81d1-af945aeb8280" name="jetbrains.mps.baseLanguage.blTypes" version="0" />
     <use id="9ded098b-ad6a-4657-bfd9-48636cfe8bc3" name="jetbrains.mps.lang.traceable" version="0" />
     <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="4" />
+    <use id="ef7bf5ac-d06c-4342-b11d-e42104eb9343" name="jetbrains.mps.lang.plugin.standalone" version="0" />
     <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
   <imports>
+    <import index="z1c3" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:jetbrains.mps.project(MPS.Core/)" />
+    <import index="alof" ref="742f6602-5a2f-4313-aa6e-ae1cd4ffdc61/java:jetbrains.mps.ide.project(MPS.Platform/)" />
+    <import index="4nm9" ref="498d89d2-c2e9-11e2-ad49-6cf049e62fe5/java:com.intellij.openapi.project(MPS.IDEA/)" />
+    <import index="ivm0" ref="r:f7c3f04b-0d46-4016-bf5e-37ab9a5f8c7e(org.campagnelab.cloud.preferences.plugin)" />
+    <import index="qq03" ref="742f6602-5a2f-4313-aa6e-ae1cd4ffdc61/java:jetbrains.mps.ide.actions(MPS.Platform/)" />
+    <import index="qkt" ref="498d89d2-c2e9-11e2-ad49-6cf049e62fe5/java:com.intellij.openapi.actionSystem(MPS.IDEA/)" />
+    <import index="ddhc" ref="498d89d2-c2e9-11e2-ad49-6cf049e62fe5/java:com.intellij.ide(MPS.IDEA/)" />
     <import index="k6yc" ref="r:1a34e7c7-7227-4711-b0a6-cf9c54d9927e(CloudAutocomplete.structure)" implicit="true" />
     <import index="fp37" ref="r:fe9006c1-df61-4432-a2d6-ce3c32a9900c(CloudAutocomplete.behavior)" implicit="true" />
     <import index="440p" ref="r:a6c7903c-0b83-4bcf-8e49-8f150f2412bf(org.campagnelab.nyosh.interactive.structure)" implicit="true" />
@@ -86,6 +94,9 @@
       </concept>
     </language>
     <language id="7a5dda62-9140-4668-ab76-d5ed1746f2b2" name="jetbrains.mps.lang.typesystem">
+      <concept id="1207055528241" name="jetbrains.mps.lang.typesystem.structure.WarningStatement" flags="nn" index="a7r0C">
+        <child id="1207055552304" name="warningText" index="a7wSD" />
+      </concept>
       <concept id="1185788614172" name="jetbrains.mps.lang.typesystem.structure.NormalTypeClause" flags="ng" index="mw_s8">
         <child id="1185788644032" name="normalType" index="mwGJk" />
       </concept>
@@ -401,6 +412,35 @@
     <node concept="1YaCAy" id="4ETRbBYfiZ5" role="1YuTPh">
       <property role="TrG5h" value="newCloudFileLiteral" />
       <ref role="1YaFvo" to="k6yc:qlLyUnyn5Y" resolve="NewCloudFileLiteral" />
+    </node>
+  </node>
+  <node concept="18kY7G" id="2XOYnOqrU5h">
+    <property role="TrG5h" value="noProjectID" />
+    <node concept="3clFbS" id="2XOYnOqrU5i" role="18ibNy">
+      <node concept="3clFbJ" id="2XOYnOqrU8q" role="3cqZAp">
+        <node concept="2OqwBi" id="2XOYnOqrUaz" role="3clFbw">
+          <node concept="1YBJjd" id="2XOYnOqrU8A" role="2Oq$k0">
+            <ref role="1YBMHb" node="2XOYnOqrU5k" resolve="cloudInteractivePath" />
+          </node>
+          <node concept="2qgKlT" id="2XOYnOqrUf2" role="2OqNvi">
+            <ref role="37wK5l" to="fp37:4ETRbBYgBcr" resolve="onlyGS" />
+          </node>
+        </node>
+        <node concept="3clFbS" id="2XOYnOqrU8s" role="3clFbx">
+          <node concept="a7r0C" id="2XOYnOqrUiZ" role="3cqZAp">
+            <node concept="Xl_RD" id="2XOYnOqrUjh" role="a7wSD">
+              <property role="Xl_RC" value="Make sure your project ID is entered under Preferences &gt; Other Settings &gt; GoogleCloud" />
+            </node>
+            <node concept="1YBJjd" id="2XOYnOqrUuS" role="2OEOjV">
+              <ref role="1YBMHb" node="2XOYnOqrU5k" resolve="cloudInteractivePath" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="2XOYnOqrU5k" role="1YuTPh">
+      <property role="TrG5h" value="cloudInteractivePath" />
+      <ref role="1YaFvo" to="k6yc:5UDj3ODq8eo" resolve="CloudInteractivePath" />
     </node>
   </node>
 </model>

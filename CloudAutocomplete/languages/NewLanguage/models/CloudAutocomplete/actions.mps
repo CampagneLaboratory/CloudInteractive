@@ -8,7 +8,7 @@
   <imports>
     <import index="k6yc" ref="r:1a34e7c7-7227-4711-b0a6-cf9c54d9927e(CloudAutocomplete.structure)" implicit="true" />
     <import index="fp37" ref="r:fe9006c1-df61-4432-a2d6-ce3c32a9900c(CloudAutocomplete.behavior)" implicit="true" />
-    <import index="rk0i" ref="r:5c1a2e64-6ce3-44f3-9901-91d04f21d955(org.campagnelab.nyosh.interactive.behavior)" implicit="true" />
+    <import index="w1kc" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:jetbrains.mps.smodel(MPS.Core/)" implicit="true" />
     <import index="440p" ref="r:a6c7903c-0b83-4bcf-8e49-8f150f2412bf(org.campagnelab.nyosh.interactive.structure)" implicit="true" />
   </imports>
   <registry>
@@ -21,11 +21,15 @@
         <child id="1238857834412" name="index" index="1LF_Uc" />
       </concept>
     </language>
+    <language id="13744753-c81f-424a-9c1b-cf8943bf4e86" name="jetbrains.mps.lang.sharedConcepts">
+      <concept id="1161622753914" name="jetbrains.mps.lang.sharedConcepts.structure.ConceptFunctionParameter_operationContext" flags="nn" index="1Q79dO" />
+    </language>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
       <concept id="1215693861676" name="jetbrains.mps.baseLanguage.structure.BaseAssignmentExpression" flags="nn" index="d038R">
         <child id="1068498886297" name="rValue" index="37vLTx" />
         <child id="1068498886295" name="lValue" index="37vLTJ" />
       </concept>
+      <concept id="1202948039474" name="jetbrains.mps.baseLanguage.structure.InstanceMethodCallOperation" flags="nn" index="liA8E" />
       <concept id="1197027756228" name="jetbrains.mps.baseLanguage.structure.DotExpression" flags="nn" index="2OqwBi">
         <child id="1197027771414" name="operand" index="2Oq$k0" />
         <child id="1197027833540" name="operation" index="2OqNvi" />
@@ -237,12 +241,18 @@
                       <property role="3SKdUp" value="auto-completion for items inside the fullPath directory:" />
                     </node>
                   </node>
-                  <node concept="3cpWs6" id="6V2PTCNXylq" role="3cqZAp">
-                    <node concept="2OqwBi" id="6V2PTCNXpbx" role="3cqZAk">
-                      <node concept="GyYSE" id="6V2PTCNXoVk" role="2Oq$k0" />
-                      <node concept="2qgKlT" id="6V2PTCNXp$i" role="2OqNvi">
-                        <ref role="37wK5l" to="rk0i:6V2PTCNWDFO" resolve="autoComplete" />
-                        <node concept="1AzSVQ" id="6V2PTCNXFHE" role="37wK5m">
+                  <node concept="3cpWs6" id="2XOYnOqqEY3" role="3cqZAp">
+                    <node concept="2OqwBi" id="2XOYnOqqz42" role="3cqZAk">
+                      <node concept="GyYSE" id="2XOYnOqqyUf" role="2Oq$k0" />
+                      <node concept="2qgKlT" id="2XOYnOqqCuH" role="2OqNvi">
+                        <ref role="37wK5l" to="fp37:2XOYnOqqC1T" resolve="useProject" />
+                        <node concept="2OqwBi" id="2XOYnOqqCJs" role="37wK5m">
+                          <node concept="1Q79dO" id="2XOYnOqqCAK" role="2Oq$k0" />
+                          <node concept="liA8E" id="2XOYnOqqCSM" role="2OqNvi">
+                            <ref role="37wK5l" to="w1kc:~IOperationContext.getProject():jetbrains.mps.project.Project" resolve="getProject" />
+                          </node>
+                        </node>
+                        <node concept="1AzSVQ" id="2XOYnOqqGHH" role="37wK5m">
                           <ref role="3cqZAo" node="7wWmVpygP3p" resolve="fullPath" />
                         </node>
                       </node>

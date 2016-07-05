@@ -23,7 +23,10 @@
     <use id="83888646-71ce-4f1c-9c53-c54016f6ad4f" name="jetbrains.mps.baseLanguage.collections" version="0" />
     <use id="c6c823fb-a9da-46e7-9850-129b0f7a7aa5" name="org.campagnelab.workflow" version="6" />
     <use id="fd392034-7849-419d-9071-12563d152375" name="jetbrains.mps.baseLanguage.closures" version="0" />
+    <use id="f9b7dda6-7ab5-4936-ad1b-2d45c57833dc" name="org.campagnelab.workflow.configuration" version="0" />
+    <use id="c513c71c-d9f3-4625-83dc-6180e1012e68" name="org.campagnelab.cloud.configuration" version="0" />
     <devkit ref="74a4431b-c31f-4707-ad8a-3f4f3c105ee2(org.campagnelab.NextflowWorkbench)" />
+    <devkit ref="5b2dfdd5-812f-48af-8989-85fe63dcbc1d(org.campagnelab.compute.cloud)" />
   </languages>
   <imports />
   <registry>
@@ -41,20 +44,12 @@
       </concept>
     </language>
   </registry>
-  <node concept="1RKsY_" id="50fOG01VJvW">
-    <node concept="271ViP" id="50fOG01VJxx" role="q33rI">
+  <node concept="1RKsY_" id="2XOYnOqrYkK">
+    <node concept="271ViP" id="2XOYnOqrYkM" role="q33rI">
       <property role="qn6Yc" value="true" />
-      <property role="q33rC" value="gs:" />
+      <property role="q33rC" value="gs://wcmc_nw_training_data" />
     </node>
-    <node concept="271ViP" id="50fOG01VJz4" role="q33rI">
-      <property role="q33rC" value="" />
-      <property role="qn6Yc" value="true" />
-    </node>
-    <node concept="271ViP" id="4ETRbBYfK59" role="q33rI">
-      <property role="q33rC" value="wcmc_nw_training_data" />
-      <property role="qn6Yc" value="true" />
-    </node>
-    <node concept="271ViP" id="4ETRbBYfK5g" role="q33rI">
+    <node concept="271ViP" id="2XOYnOqscjC" role="q33rI">
       <property role="q33rC" value="" />
     </node>
   </node>
