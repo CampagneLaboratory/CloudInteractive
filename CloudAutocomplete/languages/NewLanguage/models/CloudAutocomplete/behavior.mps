@@ -1133,7 +1133,9 @@
         </node>
         <node concept="3clFbF" id="5uN7hWa3g5z" role="3cqZAp">
           <node concept="37vLTI" id="5uN7hWa3gMl" role="3clFbG">
-            <node concept="Xl_RD" id="5uN7hWa3gM$" role="37vLTx" />
+            <node concept="Xl_RD" id="5uN7hWa3gM$" role="37vLTx">
+              <property role="Xl_RC" value="gs://" />
+            </node>
             <node concept="2OqwBi" id="5uN7hWa3g6V" role="37vLTJ">
               <node concept="37vLTw" id="5uN7hWa3g5y" role="2Oq$k0">
                 <ref role="3cqZAo" node="5uN7hWa3a7r" resolve="part" />
@@ -1371,7 +1373,25 @@
       </node>
     </node>
     <node concept="13hLZK" id="50fOG01VxdO" role="13h7CW">
-      <node concept="3clFbS" id="50fOG01VxdP" role="2VODD2" />
+      <node concept="3clFbS" id="50fOG01VxdP" role="2VODD2">
+        <node concept="3clFbF" id="36EaHJxAKiM" role="3cqZAp">
+          <node concept="37vLTI" id="36EaHJxAKxN" role="3clFbG">
+            <node concept="2ShNRf" id="36EaHJxAKzn" role="37vLTx">
+              <node concept="3zrR0B" id="36EaHJxAKyz" role="2ShVmc">
+                <node concept="3Tqbb2" id="36EaHJxAKy$" role="3zrR0E">
+                  <ref role="ehGHo" to="k6yc:5UDj3ODq8eo" resolve="CloudInteractivePath" />
+                </node>
+              </node>
+            </node>
+            <node concept="2OqwBi" id="36EaHJxAKmb" role="37vLTJ">
+              <node concept="13iPFW" id="36EaHJxAKiL" role="2Oq$k0" />
+              <node concept="3TrEf2" id="36EaHJxAKs0" role="2OqNvi">
+                <ref role="3Tt5mk" to="k6yc:4ETRbBYeWnC" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
     </node>
   </node>
 </model>

@@ -74,8 +74,8 @@
   <node concept="1TIwiD" id="qlLyUnyn5Y">
     <property role="1pbfSe" value="1642121300" />
     <property role="TrG5h" value="NewCloudFileLiteral" />
-    <property role="34LRSv" value="cloud file" />
-    <property role="R4oN_" value="Cloud file path literal" />
+    <property role="R4oN_" value="Google Storage File Path Literal" />
+    <property role="34LRSv" value="gs://" />
     <ref role="1TJDcQ" to="iowz:3aOvEIt8nXt" resolve="NewChannelInitializerExpression" />
     <node concept="1TJgyj" id="4ETRbBYeWnC" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />
