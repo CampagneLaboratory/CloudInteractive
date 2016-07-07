@@ -1,4 +1,1 @@
-# Cloud Interactive Project
-
-* Holds Rename and Autocomplete mps projects for Cloud files
-* Currently working on integrating autocompletion into NextflowWorkbench 
+# MPS project for renaming files on Google Cloud Storage buckets
