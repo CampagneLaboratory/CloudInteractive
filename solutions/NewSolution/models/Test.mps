@@ -57,17 +57,17 @@
   <node concept="3P1ILJ" id="FMHikvItsV">
     <property role="TrG5h" value="nextflow-workbench-test1" />
   </node>
-  <node concept="1RKsY_" id="FMHikvJfsT">
+  <node concept="1RKsY_" id="FMHikvJAVB">
     <ref role="lisFp" node="FMHikvItsV" resolve="nextflow-workbench-test1" />
-    <node concept="271ViP" id="FMHikvJfsV" role="q33rI">
-      <property role="qn6Yc" value="true" />
+    <node concept="271ViP" id="FMHikvJAVD" role="q33rI">
       <property role="q33rC" value="gs:" />
+      <property role="qn6Yc" value="true" />
     </node>
-    <node concept="271ViP" id="FMHikvJnpe" role="q33rI">
+    <node concept="271ViP" id="FMHikvJAVE" role="q33rI">
       <property role="q33rC" value="" />
       <property role="qn6Yc" value="true" />
     </node>
-    <node concept="271ViP" id="FMHikvJnph" role="q33rI">
+    <node concept="271ViP" id="FMHikvJAVH" role="q33rI">
       <property role="q33rC" value="" />
     </node>
   </node>
