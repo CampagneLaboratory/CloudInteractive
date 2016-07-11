@@ -29,7 +29,6 @@
     <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure">
       <concept id="1169125787135" name="jetbrains.mps.lang.structure.structure.AbstractConceptDeclaration" flags="ig" index="PkWjJ">
         <property id="4628067390765907488" name="conceptShortDescription" index="R4oN_" />
-        <property id="5092175715804935370" name="conceptAlias" index="34LRSv" />
         <property id="1587916991969465369" name="conceptId" index="1pbfSe" />
         <child id="1071489727083" name="linkDeclaration" index="1TKVEi" />
         <child id="1071489727084" name="propertyDeclaration" index="1TKVEl" />
@@ -111,6 +110,11 @@
     <property role="TrG5h" value="CloudInteractivePath" />
     <property role="19KtqR" value="true" />
     <ref role="1TJDcQ" to="440p:7wWmVpyc6O4" resolve="InteractivePath" />
+    <node concept="1TJgyj" id="FMHikvIRZW" role="1TKVEi">
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="config" />
+      <ref role="20lvS9" node="5waofqH38Mp" resolve="CloudConfig" />
+    </node>
     <node concept="1TJgyj" id="1H9hmAslHZv" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="path" />
@@ -124,16 +128,14 @@
     <property role="TrG5h" value="CloudPathPart" />
     <ref role="1TJDcQ" to="440p:7wWmVpyc6Pq" resolve="PathPart" />
   </node>
-  <node concept="1TIwiD" id="qlLyUnyn5Y">
-    <property role="1pbfSe" value="1642121300" />
-    <property role="TrG5h" value="NewCloudFileLiteral" />
-    <property role="R4oN_" value="Google Storage File Path Literal" />
-    <property role="34LRSv" value="gs://" />
-    <ref role="1TJDcQ" to="iowz:3aOvEIt8nXt" resolve="NewChannelInitializerExpression" />
-    <node concept="1TJgyj" id="4ETRbBYeWnC" role="1TKVEi">
-      <property role="20lmBu" value="aggregation" />
-      <property role="20kJfa" value="URL" />
-      <ref role="20lvS9" node="5UDj3ODq8eo" resolve="CloudInteractivePath" />
+  <node concept="1TIwiD" id="5waofqH38Mp">
+    <property role="1pbfSe" value="85388687" />
+    <property role="TrG5h" value="CloudConfig" />
+    <property role="19KtqR" value="true" />
+    <property role="R4oN_" value="Configuration for Google Cloud Storage" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="5waofqH38Mq" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
   </node>
 </model>

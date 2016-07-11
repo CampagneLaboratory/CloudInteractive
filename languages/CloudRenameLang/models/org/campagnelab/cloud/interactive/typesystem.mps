@@ -4,11 +4,14 @@
   <languages>
     <use id="7a5dda62-9140-4668-ab76-d5ed1746f2b2" name="jetbrains.mps.lang.typesystem" version="0" />
     <use id="c6c823fb-a9da-46e7-9850-129b0f7a7aa5" name="org.campagnelab.workflow" version="6" />
+    <use id="af65afd8-f0dd-4942-87d9-63a55f2a9db1" name="jetbrains.mps.lang.behavior" version="0" />
     <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
   <imports>
     <import index="440p" ref="r:a6c7903c-0b83-4bcf-8e49-8f150f2412bf(org.campagnelab.nyosh.interactive.structure)" />
-    <import index="i5dl" ref="r:c77d0859-5cf2-4017-8ab4-0bb8dac6a04f(org.campagnelab.cloud.interactive.structure)" implicit="true" />
+    <import index="mqvz" ref="r:c1c13fef-323d-4ec9-8c38-25add998e514(org.campagnelab.workflow.behavior)" />
+    <import index="i5dl" ref="r:c77d0859-5cf2-4017-8ab4-0bb8dac6a04f(org.campagnelab.cloud.interactive.structure)" />
+    <import index="iowz" ref="r:0583c0e9-dc14-4152-95a4-93036dce931b(org.campagnelab.workflow.structure)" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
     <import index="ybad" ref="r:e33dc7a0-fab0-4a78-9eaa-74e3c988e79e(org.campagnelab.cloud.interactive.behavior)" implicit="true" />
   </imports>
@@ -72,18 +75,7 @@
       </concept>
       <concept id="1080120340718" name="jetbrains.mps.baseLanguage.structure.AndExpression" flags="nn" index="1Wc70l" />
     </language>
-    <language id="3a13115c-633c-4c5c-bbcc-75c4219e9555" name="jetbrains.mps.lang.quotation">
-      <concept id="1196350785113" name="jetbrains.mps.lang.quotation.structure.Quotation" flags="nn" index="2c44tf">
-        <child id="1196350785114" name="quotedNode" index="2c44tc" />
-      </concept>
-    </language>
     <language id="7a5dda62-9140-4668-ab76-d5ed1746f2b2" name="jetbrains.mps.lang.typesystem">
-      <concept id="1207055528241" name="jetbrains.mps.lang.typesystem.structure.WarningStatement" flags="nn" index="a7r0C">
-        <child id="1207055552304" name="warningText" index="a7wSD" />
-      </concept>
-      <concept id="1185788614172" name="jetbrains.mps.lang.typesystem.structure.NormalTypeClause" flags="ng" index="mw_s8">
-        <child id="1185788644032" name="normalType" index="mwGJk" />
-      </concept>
       <concept id="1175517767210" name="jetbrains.mps.lang.typesystem.structure.ReportErrorStatement" flags="nn" index="2MkqsV">
         <child id="1175517851849" name="errorString" index="2MkJ7o" />
       </concept>
@@ -120,20 +112,11 @@
       <concept id="1174642788531" name="jetbrains.mps.lang.typesystem.structure.ConceptReference" flags="ig" index="1YaCAy">
         <reference id="1174642800329" name="concept" index="1YaFvo" />
       </concept>
-      <concept id="1174643105530" name="jetbrains.mps.lang.typesystem.structure.InferenceRule" flags="ig" index="1YbPZF" />
       <concept id="1174648085619" name="jetbrains.mps.lang.typesystem.structure.AbstractRule" flags="ng" index="1YuPPy">
         <child id="1174648101952" name="applicableNode" index="1YuTPh" />
       </concept>
       <concept id="1174650418652" name="jetbrains.mps.lang.typesystem.structure.ApplicableNodeReference" flags="nn" index="1YBJjd">
         <reference id="1174650432090" name="applicableNode" index="1YBMHb" />
-      </concept>
-      <concept id="1174657487114" name="jetbrains.mps.lang.typesystem.structure.TypeOfExpression" flags="nn" index="1Z2H0r">
-        <child id="1174657509053" name="term" index="1Z2MuG" />
-      </concept>
-      <concept id="1174658326157" name="jetbrains.mps.lang.typesystem.structure.CreateEquationStatement" flags="nn" index="1Z5TYs" />
-      <concept id="1174660718586" name="jetbrains.mps.lang.typesystem.structure.AbstractEquationStatement" flags="nn" index="1Zf1VF">
-        <child id="1174660783413" name="leftExpression" index="1ZfhK$" />
-        <child id="1174660783414" name="rightExpression" index="1ZfhKB" />
       </concept>
     </language>
     <language id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel">
@@ -154,9 +137,6 @@
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
       </concept>
-    </language>
-    <language id="c6c823fb-a9da-46e7-9850-129b0f7a7aa5" name="org.campagnelab.workflow">
-      <concept id="1980749076351268038" name="org.campagnelab.workflow.structure.String" flags="ng" index="16pbKc" />
     </language>
     <language id="83888646-71ce-4f1c-9c53-c54016f6ad4f" name="jetbrains.mps.baseLanguage.collections">
       <concept id="1165525191778" name="jetbrains.mps.baseLanguage.collections.structure.GetFirstOperation" flags="nn" index="1uHKPH" />
@@ -373,58 +353,6 @@
           </node>
         </node>
       </node>
-    </node>
-  </node>
-  <node concept="18kY7G" id="2XOYnOqrU5h">
-    <property role="TrG5h" value="noProjectID" />
-    <node concept="3clFbS" id="2XOYnOqrU5i" role="18ibNy">
-      <node concept="3clFbJ" id="2XOYnOqrU8q" role="3cqZAp">
-        <node concept="2OqwBi" id="2XOYnOqrUaz" role="3clFbw">
-          <node concept="1YBJjd" id="2XOYnOqrU8A" role="2Oq$k0">
-            <ref role="1YBMHb" node="2XOYnOqrU5k" resolve="cloudInteractivePath" />
-          </node>
-          <node concept="2qgKlT" id="2XOYnOqrUf2" role="2OqNvi">
-            <ref role="37wK5l" to="ybad:4ETRbBYgBcr" resolve="onlyGS" />
-          </node>
-        </node>
-        <node concept="3clFbS" id="2XOYnOqrU8s" role="3clFbx">
-          <node concept="a7r0C" id="2XOYnOqrUiZ" role="3cqZAp">
-            <node concept="Xl_RD" id="2XOYnOqrUjh" role="a7wSD">
-              <property role="Xl_RC" value="Make sure your project ID is entered under Preferences &gt; Other Settings &gt; GoogleCloud" />
-            </node>
-            <node concept="1YBJjd" id="2XOYnOqrUuS" role="2OEOjV">
-              <ref role="1YBMHb" node="2XOYnOqrU5k" resolve="cloudInteractivePath" />
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-    <node concept="1YaCAy" id="2XOYnOqrU5k" role="1YuTPh">
-      <property role="TrG5h" value="cloudInteractivePath" />
-      <ref role="1YaFvo" to="i5dl:5UDj3ODq8eo" resolve="CloudInteractivePath" />
-    </node>
-  </node>
-  <node concept="1YbPZF" id="4ETRbBYfiZ2">
-    <property role="TrG5h" value="typeof_NewCloudFileLiteral" />
-    <node concept="3clFbS" id="4ETRbBYfiZ3" role="18ibNy">
-      <node concept="1Z5TYs" id="4ETRbBYfj3M" role="3cqZAp">
-        <node concept="mw_s8" id="4ETRbBYfj3P" role="1ZfhK$">
-          <node concept="1Z2H0r" id="4ETRbBYfiZR" role="mwGJk">
-            <node concept="1YBJjd" id="4ETRbBYfj0m" role="1Z2MuG">
-              <ref role="1YBMHb" node="4ETRbBYfiZ5" resolve="newCloudFileLiteral" />
-            </node>
-          </node>
-        </node>
-        <node concept="mw_s8" id="4ETRbBYfj8R" role="1ZfhKB">
-          <node concept="2c44tf" id="4ETRbBYfIhp" role="mwGJk">
-            <node concept="16pbKc" id="4ETRbBYfIjR" role="2c44tc" />
-          </node>
-        </node>
-      </node>
-    </node>
-    <node concept="1YaCAy" id="4ETRbBYfiZ5" role="1YuTPh">
-      <property role="TrG5h" value="newCloudFileLiteral" />
-      <ref role="1YaFvo" to="i5dl:qlLyUnyn5Y" resolve="NewCloudFileLiteral" />
     </node>
   </node>
 </model>

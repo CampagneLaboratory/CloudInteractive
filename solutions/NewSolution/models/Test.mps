@@ -31,6 +31,45 @@
     <import index="qnes" ref="r:2f60864f-994c-4413-b324-244fab1c0017(org.campagnelab.nyosh.functions.behavior)" />
     <import index="piqp" ref="r:dbc34bfe-035e-40e7-907e-8abb3a638383(org.campagnelab.nyosh.gstring.behavior)" />
   </imports>
-  <registry />
+  <registry>
+    <language id="66f96b90-b2af-4ce4-92ca-dc0e9d7e2b43" name="org.campagnelab.nyosh.interactive">
+      <concept id="8663900622043507972" name="org.campagnelab.nyosh.interactive.structure.InteractivePath" flags="ng" index="q33qM">
+        <child id="8663900622043508056" name="path" index="q33rI" />
+      </concept>
+      <concept id="8663900622043508058" name="org.campagnelab.nyosh.interactive.structure.PathPart" flags="ng" index="q33rG">
+        <property id="8663900622043508062" name="part" index="q33rC" />
+        <property id="8663900622046639162" name="isDirectory" index="qn6Yc" />
+      </concept>
+    </language>
+    <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
+      <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
+        <property id="1169194664001" name="name" index="TrG5h" />
+      </concept>
+    </language>
+    <language id="d24699a3-e8c4-48e6-93dd-88fb4f2f1c78" name="org.campagnelab.cloud.interactive">
+      <concept id="1966179032220234204" name="org.campagnelab.cloud.interactive.structure.CloudPathPart" flags="ng" index="271ViP" />
+      <concept id="6343989637686267033" name="org.campagnelab.cloud.interactive.structure.CloudConfig" flags="ng" index="3P1ILJ" />
+      <concept id="6821066936200758168" name="org.campagnelab.cloud.interactive.structure.CloudInteractivePath" flags="ng" index="1RKsY_">
+        <reference id="788892055794057212" name="config" index="lisFp" />
+      </concept>
+    </language>
+  </registry>
+  <node concept="3P1ILJ" id="FMHikvItsV">
+    <property role="TrG5h" value="nextflow-workbench-test1" />
+  </node>
+  <node concept="1RKsY_" id="FMHikvJfsT">
+    <ref role="lisFp" node="FMHikvItsV" resolve="nextflow-workbench-test1" />
+    <node concept="271ViP" id="FMHikvJfsV" role="q33rI">
+      <property role="qn6Yc" value="true" />
+      <property role="q33rC" value="gs:" />
+    </node>
+    <node concept="271ViP" id="FMHikvJnpe" role="q33rI">
+      <property role="q33rC" value="" />
+      <property role="qn6Yc" value="true" />
+    </node>
+    <node concept="271ViP" id="FMHikvJnph" role="q33rI">
+      <property role="q33rC" value="" />
+    </node>
+  </node>
 </model>
 

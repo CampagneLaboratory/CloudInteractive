@@ -3,6 +3,7 @@
   <component name="MPSProject">
     <projectModules>
       <modulePath path="$PROJECT_DIR$/languages/CloudRenameLang/org.campagnelab.cloud.interactive.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/org.campagnelab.cloud.interactive.workflow/org.campagnelab.cloud.interactive.workflow.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/NewSolution/CloudInteractiveTest.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/../CloudAutocomplete/languages/NewLanguage/org.campagnelab.cloud.interactive.mpl" folder="" />
     </projectModules>

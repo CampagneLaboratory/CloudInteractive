@@ -22,15 +22,11 @@
         <child id="1238857834412" name="index" index="1LF_Uc" />
       </concept>
     </language>
-    <language id="13744753-c81f-424a-9c1b-cf8943bf4e86" name="jetbrains.mps.lang.sharedConcepts">
-      <concept id="1161622753914" name="jetbrains.mps.lang.sharedConcepts.structure.ConceptFunctionParameter_operationContext" flags="nn" index="1Q79dO" />
-    </language>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
       <concept id="1215693861676" name="jetbrains.mps.baseLanguage.structure.BaseAssignmentExpression" flags="nn" index="d038R">
         <child id="1068498886297" name="rValue" index="37vLTx" />
         <child id="1068498886295" name="lValue" index="37vLTJ" />
       </concept>
-      <concept id="1202948039474" name="jetbrains.mps.baseLanguage.structure.InstanceMethodCallOperation" flags="nn" index="liA8E" />
       <concept id="1197027756228" name="jetbrains.mps.baseLanguage.structure.DotExpression" flags="nn" index="2OqwBi">
         <child id="1197027771414" name="operand" index="2Oq$k0" />
         <child id="1197027833540" name="operation" index="2OqNvi" />
@@ -246,13 +242,7 @@
                     <node concept="2OqwBi" id="2XOYnOqqz42" role="3cqZAk">
                       <node concept="GyYSE" id="2XOYnOqqyUf" role="2Oq$k0" />
                       <node concept="2qgKlT" id="2XOYnOqqCuH" role="2OqNvi">
-                        <ref role="37wK5l" to="ybad:2XOYnOqqC1T" resolve="useProject" />
-                        <node concept="2OqwBi" id="2XOYnOqqCJs" role="37wK5m">
-                          <node concept="1Q79dO" id="2XOYnOqqCAK" role="2Oq$k0" />
-                          <node concept="liA8E" id="2XOYnOqqCSM" role="2OqNvi">
-                            <ref role="37wK5l" to="w1kc:~IOperationContext.getProject():jetbrains.mps.project.Project" resolve="getProject" />
-                          </node>
-                        </node>
+                        <ref role="37wK5l" to="ybad:1H9hmAslmKt" resolve="autoComplete" />
                         <node concept="1AzSVQ" id="2XOYnOqqGHH" role="37wK5m">
                           <ref role="3cqZAo" node="7wWmVpygP3p" resolve="fullPath" />
                         </node>

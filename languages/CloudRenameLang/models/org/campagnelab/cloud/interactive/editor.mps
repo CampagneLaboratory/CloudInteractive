@@ -22,9 +22,11 @@
     <import index="cj4x" ref="1ed103c3-3aa6-49b7-9c21-6765ee11f224/java:jetbrains.mps.openapi.editor(MPS.Editor/)" />
     <import index="xyku" ref="r:9d67aa2b-255d-480b-8ee1-57104f8f7d7e(org.campagnelab.nyosh.interactive.editor)" />
     <import index="440p" ref="r:a6c7903c-0b83-4bcf-8e49-8f150f2412bf(org.campagnelab.nyosh.interactive.structure)" />
+    <import index="iowz" ref="r:0583c0e9-dc14-4152-95a4-93036dce931b(org.campagnelab.workflow.structure)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
     <import index="ybad" ref="r:e33dc7a0-fab0-4a78-9eaa-74e3c988e79e(org.campagnelab.cloud.interactive.behavior)" implicit="true" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
+    <import index="ki0w" ref="r:5ad3f196-646c-4457-8b31-f073cd454bf2(org.campagnelab.workflow.editor)" implicit="true" />
   </imports>
   <registry>
     <language id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor">
@@ -66,6 +68,7 @@
         <property id="1186403713874" name="color" index="Vb096" />
         <child id="1186403803051" name="query" index="VblUZ" />
       </concept>
+      <concept id="1186403751766" name="jetbrains.mps.lang.editor.structure.FontStyleStyleClassItem" flags="ln" index="Vb9p2" />
       <concept id="1186404549998" name="jetbrains.mps.lang.editor.structure.ForegroundColorStyleClassItem" flags="ln" index="VechU" />
       <concept id="1186414536763" name="jetbrains.mps.lang.editor.structure.BooleanStyleSheetItem" flags="ln" index="VOi$J">
         <property id="1186414551515" name="flag" index="VOm3f" />
@@ -80,6 +83,13 @@
       </concept>
       <concept id="1240253180846" name="jetbrains.mps.lang.editor.structure.IndentLayoutNoWrapClassItem" flags="ln" index="34QqEe" />
       <concept id="1221057094638" name="jetbrains.mps.lang.editor.structure.QueryFunction_Integer" flags="in" index="1cFabM" />
+      <concept id="1088013125922" name="jetbrains.mps.lang.editor.structure.CellModel_RefCell" flags="sg" stub="730538219795941030" index="1iCGBv">
+        <child id="1088186146602" name="editorComponent" index="1sWHZn" />
+      </concept>
+      <concept id="1381004262292414836" name="jetbrains.mps.lang.editor.structure.ICellStyle" flags="ng" index="1k5N5V">
+        <reference id="1381004262292426837" name="parentStyleClass" index="1k5W1q" />
+      </concept>
+      <concept id="1088185857835" name="jetbrains.mps.lang.editor.structure.InlineEditorComponent" flags="ig" index="1sVBvm" />
       <concept id="1139848536355" name="jetbrains.mps.lang.editor.structure.CellModel_WithRole" flags="ng" index="1$h60E">
         <property id="1214560368769" name="emptyNoTargetText" index="39s7Ar" />
         <property id="1140017977771" name="readOnly" index="1Intyy" />
@@ -103,7 +113,6 @@
       <concept id="1219418625346" name="jetbrains.mps.lang.editor.structure.IStyleContainer" flags="ng" index="3F0Thp">
         <child id="1219418656006" name="styleItem" index="3F10Kt" />
       </concept>
-      <concept id="1073389882823" name="jetbrains.mps.lang.editor.structure.CellModel_RefNode" flags="sg" stub="730538219795960754" index="3F1sOY" />
       <concept id="1073390211982" name="jetbrains.mps.lang.editor.structure.CellModel_RefNodeList" flags="sg" stub="2794558372793454595" index="3F2HdR">
         <reference id="1173177718857" name="elementActionMap" index="APP_o" />
       </concept>
@@ -703,37 +712,66 @@
   </node>
   <node concept="24kQdi" id="3RqXynyMmDp">
     <ref role="1XX52x" to="i5dl:5UDj3ODq8eo" resolve="CloudInteractivePath" />
-    <node concept="3F2HdR" id="3RqXynyMmD$" role="2wV5jI">
-      <ref role="APP_o" to="xyku:7wWmVpyqBqr" resolve="ActionMapPathPart" />
-      <ref role="1NtTu8" to="i5dl:1H9hmAslHZv" />
-      <node concept="VechU" id="3RqXynyMBMt" role="3F10Kt">
-        <property role="Vb096" value="DARK_MAGENTA" />
-      </node>
-      <node concept="34QqEe" id="3RqXynyMBOi" role="3F10Kt">
-        <property role="VOm3f" value="true" />
-      </node>
-      <node concept="l2Vlx" id="3RqXynyMBOq" role="2czzBx" />
-      <node concept="2o9xnK" id="3RqXynyMB0f" role="2gpyvW">
-        <node concept="3clFbS" id="3RqXynyMB0g" role="2VODD2">
-          <node concept="3clFbF" id="3RqXynyMB1r" role="3cqZAp">
-            <node concept="Xl_RD" id="3RqXynyMB1q" role="3clFbG">
-              <property role="Xl_RC" value="/" />
+    <node concept="3EZMnI" id="FMHikvIRWM" role="2wV5jI">
+      <node concept="3EZMnI" id="FMHikvIS2J" role="3EZMnx">
+        <node concept="2iRfu4" id="FMHikvIS2K" role="2iSdaV" />
+        <node concept="3F0ifn" id="FMHikvIRZE" role="3EZMnx">
+          <property role="3F0ifm" value="Uses Configuration: " />
+          <ref role="1k5W1q" to="ki0w:5HJ0Qzylzqv" resolve="Descriptive" />
+        </node>
+        <node concept="1iCGBv" id="FMHikvIS38" role="3EZMnx">
+          <ref role="1NtTu8" to="i5dl:FMHikvIRZW" />
+          <node concept="1sVBvm" id="FMHikvIS3a" role="1sWHZn">
+            <node concept="3F0A7n" id="FMHikvIS3i" role="2wV5jI">
+              <property role="1Intyy" value="true" />
+              <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+              <node concept="VechU" id="FMHikvJlu9" role="3F10Kt">
+                <property role="Vb096" value="DARK_GREEN" />
+              </node>
             </node>
           </node>
         </node>
       </node>
-      <node concept="tppnM" id="3RqXynyMB3v" role="sWeuL">
-        <node concept="11LMrY" id="3RqXynyMB3_" role="3F10Kt">
-          <property role="VOm3f" value="true" />
+      <node concept="2iRkQZ" id="FMHikvIRWN" role="2iSdaV" />
+      <node concept="3EZMnI" id="FMHikvJfw6" role="3EZMnx">
+        <node concept="2iRfu4" id="FMHikvJfw7" role="2iSdaV" />
+        <node concept="3F0ifn" id="FMHikvJfzU" role="3EZMnx">
+          <property role="3F0ifm" value="URL:" />
+          <ref role="1k5W1q" to="ki0w:5HJ0Qzylzqv" resolve="Descriptive" />
         </node>
-      </node>
-      <node concept="4$FPG" id="1cKEkLGywU6" role="4_6I_">
-        <node concept="3clFbS" id="1cKEkLGywU7" role="2VODD2">
-          <node concept="3clFbF" id="1cKEkLGywUN" role="3cqZAp">
-            <node concept="2ShNRf" id="1cKEkLGywUL" role="3clFbG">
-              <node concept="3zrR0B" id="1cKEkLGyx0w" role="2ShVmc">
-                <node concept="3Tqbb2" id="1cKEkLGyx0y" role="3zrR0E">
-                  <ref role="ehGHo" to="i5dl:1H9hmAsjJ7s" resolve="CloudPathPart" />
+        <node concept="3F2HdR" id="3RqXynyMmD$" role="3EZMnx">
+          <ref role="APP_o" to="xyku:7wWmVpyqBqr" resolve="ActionMapPathPart" />
+          <ref role="1NtTu8" to="i5dl:1H9hmAslHZv" />
+          <node concept="VechU" id="3RqXynyMBMt" role="3F10Kt">
+            <property role="Vb096" value="DARK_MAGENTA" />
+          </node>
+          <node concept="34QqEe" id="3RqXynyMBOi" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
+          <node concept="l2Vlx" id="3RqXynyMBOq" role="2czzBx" />
+          <node concept="2o9xnK" id="3RqXynyMB0f" role="2gpyvW">
+            <node concept="3clFbS" id="3RqXynyMB0g" role="2VODD2">
+              <node concept="3clFbF" id="3RqXynyMB1r" role="3cqZAp">
+                <node concept="Xl_RD" id="3RqXynyMB1q" role="3clFbG">
+                  <property role="Xl_RC" value="/" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="tppnM" id="3RqXynyMB3v" role="sWeuL">
+            <node concept="11LMrY" id="3RqXynyMB3_" role="3F10Kt">
+              <property role="VOm3f" value="true" />
+            </node>
+          </node>
+          <node concept="4$FPG" id="1cKEkLGywU6" role="4_6I_">
+            <node concept="3clFbS" id="1cKEkLGywU7" role="2VODD2">
+              <node concept="3clFbF" id="1cKEkLGywUN" role="3cqZAp">
+                <node concept="2ShNRf" id="1cKEkLGywUL" role="3clFbG">
+                  <node concept="3zrR0B" id="1cKEkLGyx0w" role="2ShVmc">
+                    <node concept="3Tqbb2" id="1cKEkLGyx0y" role="3zrR0E">
+                      <ref role="ehGHo" to="i5dl:1H9hmAsjJ7s" resolve="CloudPathPart" />
+                    </node>
+                  </node>
                 </node>
               </node>
             </node>
@@ -762,10 +800,26 @@
       <node concept="2V7CMv" id="7wWmVpyjHyN" role="3F10Kt" />
     </node>
   </node>
-  <node concept="24kQdi" id="qlLyUnynAp">
-    <ref role="1XX52x" to="i5dl:qlLyUnyn5Y" resolve="NewCloudFileLiteral" />
-    <node concept="3F1sOY" id="4ETRbBYeWnF" role="2wV5jI">
-      <ref role="1NtTu8" to="i5dl:4ETRbBYeWnC" />
+  <node concept="24kQdi" id="5waofqH38M_">
+    <ref role="1XX52x" to="i5dl:5waofqH38Mp" resolve="CloudConfig" />
+    <node concept="3EZMnI" id="FMHikvHLGi" role="2wV5jI">
+      <node concept="3F0ifn" id="FMHikvHLG$" role="3EZMnx">
+        <property role="3F0ifm" value="Google Cloud Platform Configuration" />
+      </node>
+      <node concept="2iRkQZ" id="FMHikvHLGj" role="2iSdaV" />
+      <node concept="3EZMnI" id="5waofqH38MB" role="3EZMnx">
+        <node concept="2iRfu4" id="5waofqH38MC" role="2iSdaV" />
+        <node concept="3F0ifn" id="5waofqH38MQ" role="3EZMnx">
+          <property role="3F0ifm" value="Project ID:" />
+          <node concept="Vb9p2" id="FMHikvHsHR" role="3F10Kt" />
+        </node>
+        <node concept="3F0A7n" id="5waofqH38MW" role="3EZMnx">
+          <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          <node concept="VechU" id="FMHikvHwmR" role="3F10Kt">
+            <property role="Vb096" value="DARK_GREEN" />
+          </node>
+        </node>
+      </node>
     </node>
   </node>
 </model>
