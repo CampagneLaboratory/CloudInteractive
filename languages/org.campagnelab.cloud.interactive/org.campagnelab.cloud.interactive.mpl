@@ -115,6 +115,8 @@
     <dependency reexport="false">498d89d2-c2e9-11e2-ad49-6cf049e62fe5(MPS.IDEA)</dependency>
     <dependency reexport="false">2183f281-ca53-4c69-af11-465550230ecd(org.campagnelab.cloud.preferences)</dependency>
     <dependency reexport="false">c6c823fb-a9da-46e7-9850-129b0f7a7aa5(org.campagnelab.workflow)</dependency>
+    <dependency reexport="false">6b582b8c-1c64-4fa1-8890-52f4807d3df5(org.campagnelab.cloud.interactive.workflow)</dependency>
+    <dependency reexport="false">66f96b90-b2af-4ce4-92ca-dc0e9d7e2b43(org.campagnelab.nyosh.interactive)</dependency>
   </dependencies>
   <usedDevKits>
     <usedDevKit>2677cb18-f558-4e33-bc38-a5139cee06dc(jetbrains.mps.devkit.language-design)</usedDevKit>
@@ -186,6 +188,7 @@
     <module reference="c72da2b9-7cce-4447-8389-f407dc1158b7(jetbrains.mps.lang.structure)" version="0" />
     <module reference="9ded098b-ad6a-4657-bfd9-48636cfe8bc3(jetbrains.mps.lang.traceable)" version="0" />
     <module reference="d24699a3-e8c4-48e6-93dd-88fb4f2f1c78(org.campagnelab.cloud.interactive)" version="0" />
+    <module reference="6b582b8c-1c64-4fa1-8890-52f4807d3df5(org.campagnelab.cloud.interactive.workflow)" version="0" />
     <module reference="2183f281-ca53-4c69-af11-465550230ecd(org.campagnelab.cloud.preferences)" version="0" />
     <module reference="43809d33-d5e3-4390-917e-3944cb211ee3(org.campagnelab.icons)" version="0" />
     <module reference="c6567f13-87ab-4686-8f6f-42e8228c0e27(org.campagnelab.nyosh.gstring)" version="0" />
