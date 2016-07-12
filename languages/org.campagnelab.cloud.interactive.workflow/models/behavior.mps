@@ -11,8 +11,8 @@
     <import index="i5dl" ref="r:c77d0859-5cf2-4017-8ab4-0bb8dac6a04f(org.campagnelab.cloud.interactive.structure)" />
     <import index="iowz" ref="r:0583c0e9-dc14-4152-95a4-93036dce931b(org.campagnelab.workflow.structure)" />
     <import index="3jiv" ref="r:36d353e8-689e-4297-b8ea-7712719668fa(org.campagnelab.workflow.nyosh.structure)" />
-    <import index="tno8" ref="r:cd25030d-4bb4-4480-827e-f38ea4b0551b(org.campagnelab.cloud.interactive.workflow.structure)" implicit="true" />
-    <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
+    <import index="tno8" ref="r:cd25030d-4bb4-4480-827e-f38ea4b0551b(org.campagnelab.cloud.interactive.workflow.structure)" />
+    <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" />
   </imports>
   <registry>
     <language id="af65afd8-f0dd-4942-87d9-63a55f2a9db1" name="jetbrains.mps.lang.behavior">
@@ -23,7 +23,8 @@
       </concept>
       <concept id="1225194413805" name="jetbrains.mps.lang.behavior.structure.ConceptConstructorDeclaration" flags="in" index="13hLZK" />
       <concept id="1225194472830" name="jetbrains.mps.lang.behavior.structure.ConceptMethodDeclaration" flags="ng" index="13i0hz">
-        <property id="5864038008284099149" name="isStatic" index="2Ki8OM" />
+        <property id="1225194472832" name="isVirtual" index="13i0it" />
+        <property id="1225194472834" name="isAbstract" index="13i0iv" />
         <reference id="1225194472831" name="overriddenMethod" index="13i0hy" />
       </concept>
       <concept id="1225194691553" name="jetbrains.mps.lang.behavior.structure.ThisNodeExpression" flags="nn" index="13iPFW" />
@@ -159,26 +160,6 @@
   <node concept="13h7C7" id="50fOG01VxdN">
     <property role="3GE5qa" value="" />
     <ref role="13h7C2" to="tno8:qlLyUnyn5Y" resolve="NewCloudFileLiteral" />
-    <node concept="13i0hz" id="50fOG01VxdS" role="13h7CS">
-      <property role="TrG5h" value="removeProperty" />
-      <property role="2Ki8OM" value="false" />
-      <ref role="13i0hy" to="mqvz:2aFge8hFtpX" resolve="removeProperty" />
-      <node concept="3clFbS" id="50fOG01VxdV" role="3clF47">
-        <node concept="3clFbF" id="50fOG01VxAD" role="3cqZAp">
-          <node concept="2OqwBi" id="4ETRbBYeZs_" role="3clFbG">
-            <node concept="2OqwBi" id="50fOG01VxCj" role="2Oq$k0">
-              <node concept="13iPFW" id="50fOG01VxAC" role="2Oq$k0" />
-              <node concept="3TrEf2" id="5waofqH3d63" role="2OqNvi">
-                <ref role="3Tt5mk" to="tno8:4ETRbBYeWnC" />
-              </node>
-            </node>
-            <node concept="1PgB_6" id="4ETRbBYeZxe" role="2OqNvi" />
-          </node>
-        </node>
-      </node>
-      <node concept="3cqZAl" id="50fOG01VxAw" role="3clF45" />
-      <node concept="3Tm1VV" id="50fOG01VxAx" role="1B3o_S" />
-    </node>
     <node concept="13i0hz" id="50fOG01VGuj" role="13h7CS">
       <property role="TrG5h" value="getPath" />
       <node concept="3Tm1VV" id="50fOG01VGuk" role="1B3o_S" />
@@ -442,19 +423,53 @@
         </node>
       </node>
     </node>
+    <node concept="13i0hz" id="5TPcprhGBTh" role="13h7CS">
+      <property role="TrG5h" value="removeProperty" />
+      <property role="13i0it" value="false" />
+      <property role="13i0iv" value="false" />
+      <ref role="13i0hy" to="mqvz:2aFge8hFtpX" resolve="removeProperty" />
+      <node concept="3Tm1VV" id="5TPcprhGBTi" role="1B3o_S" />
+      <node concept="3clFbS" id="5TPcprhGBTl" role="3clF47">
+        <node concept="3clFbF" id="5TPcprhGDUm" role="3cqZAp">
+          <node concept="2OqwBi" id="5TPcprhGE4J" role="3clFbG">
+            <node concept="2OqwBi" id="5TPcprhGDVY" role="2Oq$k0">
+              <node concept="13iPFW" id="5TPcprhGDUl" role="2Oq$k0" />
+              <node concept="3TrEf2" id="5TPcprhGDZH" role="2OqNvi">
+                <ref role="3Tt5mk" to="tno8:4ETRbBYeWnC" />
+              </node>
+            </node>
+            <node concept="1PgB_6" id="5TPcprhGE8S" role="2OqNvi" />
+          </node>
+        </node>
+      </node>
+      <node concept="3cqZAl" id="5TPcprhGBTm" role="3clF45" />
+    </node>
   </node>
   <node concept="13h7C7" id="_nX$8M3vVR">
     <ref role="13h7C2" to="tno8:_nX$8M3vEn" resolve="CloudFolderRef" />
-    <node concept="13i0hz" id="_nX$8M3w3_" role="13h7CS">
-      <property role="TrG5h" value="removeProperty" />
-      <property role="2Ki8OM" value="false" />
-      <ref role="13i0hy" to="mqvz:2aFge8hFtpX" resolve="removeProperty" />
-      <node concept="3clFbS" id="_nX$8M3w3C" role="3clF47" />
-      <node concept="3cqZAl" id="_nX$8M3w70" role="3clF45" />
-      <node concept="3Tm1VV" id="_nX$8M3w71" role="1B3o_S" />
-    </node>
     <node concept="13hLZK" id="_nX$8M3vVS" role="13h7CW">
       <node concept="3clFbS" id="_nX$8M3vVT" role="2VODD2" />
+    </node>
+    <node concept="13i0hz" id="5TPcprhGEae" role="13h7CS">
+      <property role="TrG5h" value="removeProperty" />
+      <property role="13i0it" value="false" />
+      <property role="13i0iv" value="false" />
+      <ref role="13i0hy" to="mqvz:2aFge8hFtpX" resolve="removeProperty" />
+      <node concept="3Tm1VV" id="5TPcprhGEaf" role="1B3o_S" />
+      <node concept="3clFbS" id="5TPcprhGEai" role="3clF47">
+        <node concept="3clFbF" id="5TPcprhGEat" role="3cqZAp">
+          <node concept="2OqwBi" id="5TPcprhGEsr" role="3clFbG">
+            <node concept="2OqwBi" id="5TPcprhGEc5" role="2Oq$k0">
+              <node concept="13iPFW" id="5TPcprhGEas" role="2Oq$k0" />
+              <node concept="3TrEf2" id="5TPcprhGEfO" role="2OqNvi">
+                <ref role="3Tt5mk" to="tno8:_nX$8M3vEo" />
+              </node>
+            </node>
+            <node concept="1PgB_6" id="5TPcprhGEx0" role="2OqNvi" />
+          </node>
+        </node>
+      </node>
+      <node concept="3cqZAl" id="5TPcprhGEaj" role="3clF45" />
     </node>
   </node>
 </model>
