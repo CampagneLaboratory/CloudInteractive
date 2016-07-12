@@ -51,7 +51,8 @@
   <node concept="1TIwiD" id="_nX$8M3vEn">
     <property role="1pbfSe" value="996536537" />
     <property role="TrG5h" value="CloudFolderRef" />
-    <property role="34LRSv" value="files from a cloud folder" />
+    <property role="34LRSv" value="files from cloud folder" />
+    <property role="R4oN_" value="Google Storage Folder" />
     <ref role="1TJDcQ" to="iowz:3aOvEIt8nXt" resolve="NewChannelInitializerExpression" />
     <node concept="1TJgyj" id="_nX$8M3vEo" role="1TKVEi">
       <property role="20lmBu" value="reference" />
