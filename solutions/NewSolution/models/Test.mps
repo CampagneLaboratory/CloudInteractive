@@ -50,30 +50,34 @@
       <concept id="1966179032220234204" name="org.campagnelab.cloud.interactive.structure.CloudPathPart" flags="ng" index="271ViP" />
       <concept id="6343989637686267033" name="org.campagnelab.cloud.interactive.structure.CloudConfig" flags="ng" index="3P1ILJ" />
       <concept id="6821066936200758168" name="org.campagnelab.cloud.interactive.structure.CloudInteractivePath" flags="ng" index="1RKsY_">
-        <reference id="788892055794057212" name="config" index="lisFp" />
+        <reference id="788892055794057212" name="projectID" index="lisFp" />
       </concept>
     </language>
   </registry>
   <node concept="3P1ILJ" id="FMHikvItsV">
     <property role="TrG5h" value="nextflow-workbench-test1" />
   </node>
-  <node concept="1RKsY_" id="FMHikvKHra">
+  <node concept="1RKsY_" id="5TPcprhZb4f">
     <ref role="lisFp" node="FMHikvItsV" resolve="nextflow-workbench-test1" />
-    <node concept="271ViP" id="FMHikvKHrc" role="q33rI">
+    <node concept="271ViP" id="5TPcprhZb4h" role="q33rI">
       <property role="q33rC" value="gs:" />
       <property role="qn6Yc" value="true" />
     </node>
-    <node concept="271ViP" id="FMHikvKMxM" role="q33rI">
+    <node concept="271ViP" id="5TPcpri1xNJ" role="q33rI">
       <property role="q33rC" value="" />
       <property role="qn6Yc" value="true" />
     </node>
-    <node concept="271ViP" id="FMHikvKMxR" role="q33rI">
+    <node concept="271ViP" id="5TPcpri1xO3" role="q33rI">
       <property role="q33rC" value="wcmc_nw_training_data" />
       <property role="qn6Yc" value="true" />
     </node>
-    <node concept="271ViP" id="5TPcprhJpnD" role="q33rI">
+    <node concept="271ViP" id="5TPcpri1xOj" role="q33rI">
       <property role="q33rC" value="test" />
       <property role="qn6Yc" value="true" />
+    </node>
+    <node concept="271ViP" id="5TPcpri1xOB" role="q33rI">
+      <property role="q33rC" value="helloWorld.txt" />
+      <property role="qn6Yc" value="false" />
     </node>
   </node>
 </model>
