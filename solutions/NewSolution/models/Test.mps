@@ -57,27 +57,20 @@
   <node concept="3P1ILJ" id="FMHikvItsV">
     <property role="TrG5h" value="nextflow-workbench-test1" />
   </node>
-  <node concept="1RKsY_" id="5TPcprhZb4f">
+  <node concept="1RKsY_" id="5TPcpri61Nc">
     <ref role="lisFp" node="FMHikvItsV" resolve="nextflow-workbench-test1" />
-    <node concept="271ViP" id="5TPcprhZb4h" role="q33rI">
+    <node concept="271ViP" id="5TPcpri65dA" role="q33rI">
       <property role="q33rC" value="gs:" />
-      <property role="qn6Yc" value="true" />
     </node>
-    <node concept="271ViP" id="5TPcpri1xNJ" role="q33rI">
+    <node concept="271ViP" id="5TPcpri65dB" role="q33rI">
       <property role="q33rC" value="" />
+    </node>
+    <node concept="271ViP" id="5TPcpri65di" role="q33rI">
+      <property role="q33rC" value="wcmc_nw_training_data/test" />
       <property role="qn6Yc" value="true" />
     </node>
-    <node concept="271ViP" id="5TPcpri1xO3" role="q33rI">
-      <property role="q33rC" value="wcmc_nw_training_data" />
-      <property role="qn6Yc" value="true" />
-    </node>
-    <node concept="271ViP" id="5TPcpri1xOj" role="q33rI">
-      <property role="q33rC" value="test" />
-      <property role="qn6Yc" value="true" />
-    </node>
-    <node concept="271ViP" id="5TPcpri1xOB" role="q33rI">
-      <property role="q33rC" value="helloWorld.txt" />
-      <property role="qn6Yc" value="false" />
+    <node concept="271ViP" id="5TPcpri65dI" role="q33rI">
+      <property role="q33rC" value="" />
     </node>
   </node>
 </model>
