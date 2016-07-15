@@ -35,6 +35,7 @@
       <concept id="1070475926800" name="jetbrains.mps.baseLanguage.structure.StringLiteral" flags="nn" index="Xl_RD">
         <property id="1070475926801" name="value" index="Xl_RC" />
       </concept>
+      <concept id="1070534058343" name="jetbrains.mps.baseLanguage.structure.NullLiteral" flags="nn" index="10Nm6u" />
       <concept id="1068431474542" name="jetbrains.mps.baseLanguage.structure.VariableDeclaration" flags="ng" index="33uBYm">
         <child id="1068431790190" name="initializer" index="33vP2m" />
       </concept>
@@ -135,6 +136,9 @@
       </concept>
       <concept id="1138056022639" name="jetbrains.mps.lang.smodel.structure.SPropertyAccess" flags="nn" index="3TrcHB">
         <reference id="1138056395725" name="property" index="3TsBF5" />
+      </concept>
+      <concept id="1138056143562" name="jetbrains.mps.lang.smodel.structure.SLinkAccess" flags="nn" index="3TrEf2">
+        <reference id="1138056516764" name="link" index="3Tt5mk" />
       </concept>
       <concept id="1138056282393" name="jetbrains.mps.lang.smodel.structure.SLinkListAccess" flags="nn" index="3Tsc0h">
         <reference id="1138056546658" name="link" index="3TtcxE" />
@@ -327,7 +331,6 @@
             </node>
           </node>
         </node>
-        <node concept="3clFbH" id="5TPcpri5IbK" role="3cqZAp" />
         <node concept="3cpWs8" id="5TPcpri5HKC" role="3cqZAp">
           <node concept="3cpWsn" id="5TPcpri5HKF" role="3cpWs9">
             <property role="TrG5h" value="second" />
@@ -435,6 +438,38 @@
           </node>
         </node>
       </node>
+    </node>
+  </node>
+  <node concept="18kY7G" id="5TPcpriwEv7">
+    <property role="TrG5h" value="NoConfiguration" />
+    <node concept="3clFbS" id="5TPcpriwEv8" role="18ibNy">
+      <node concept="3clFbJ" id="5TPcpriwEvd" role="3cqZAp">
+        <node concept="3clFbC" id="5TPcpriwEF0" role="3clFbw">
+          <node concept="2OqwBi" id="5TPcpriwExp" role="3uHU7B">
+            <node concept="1YBJjd" id="5TPcpriwEvs" role="2Oq$k0">
+              <ref role="1YBMHb" node="5TPcpriwEva" resolve="cloudInteractivePath" />
+            </node>
+            <node concept="3TrEf2" id="5TPcpriwECw" role="2OqNvi">
+              <ref role="3Tt5mk" to="i5dl:FMHikvIRZW" />
+            </node>
+          </node>
+          <node concept="10Nm6u" id="5TPcpriwEFt" role="3uHU7w" />
+        </node>
+        <node concept="3clFbS" id="5TPcpriwEvf" role="3clFbx">
+          <node concept="2MkqsV" id="5TPcpriwEFH" role="3cqZAp">
+            <node concept="Xl_RD" id="5TPcpriwEFN" role="2MkJ7o">
+              <property role="Xl_RC" value="No configuration node for this path" />
+            </node>
+            <node concept="1YBJjd" id="5TPcpriwKmH" role="2OEOjV">
+              <ref role="1YBMHb" node="5TPcpriwEva" resolve="cloudInteractivePath" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="5TPcpriwEva" role="1YuTPh">
+      <property role="TrG5h" value="cloudInteractivePath" />
+      <ref role="1YaFvo" to="i5dl:5UDj3ODq8eo" resolve="CloudInteractivePath" />
     </node>
   </node>
 </model>
