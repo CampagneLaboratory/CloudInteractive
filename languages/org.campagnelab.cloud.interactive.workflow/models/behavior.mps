@@ -11,6 +11,9 @@
     <import index="i5dl" ref="r:c77d0859-5cf2-4017-8ab4-0bb8dac6a04f(org.campagnelab.cloud.interactive.structure)" />
     <import index="tno8" ref="r:cd25030d-4bb4-4480-827e-f38ea4b0551b(org.campagnelab.cloud.interactive.workflow.structure)" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" />
+    <import index="nd5s" ref="6b582b8c-1c64-4fa1-8890-52f4807d3df5/java:org.campagnelab.cloud.interactive(org.campagnelab.cloud.interactive.workflow/)" />
+    <import index="ybad" ref="r:e33dc7a0-fab0-4a78-9eaa-74e3c988e79e(org.campagnelab.cloud.interactive.behavior)" implicit="true" />
+    <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="af65afd8-f0dd-4942-87d9-63a55f2a9db1" name="jetbrains.mps.lang.behavior">
@@ -105,6 +108,7 @@
         <reference id="1068499141037" name="baseMethodDeclaration" index="37wK5l" />
         <child id="1068499141038" name="actualArgument" index="37wK5m" />
       </concept>
+      <concept id="1212685548494" name="jetbrains.mps.baseLanguage.structure.ClassCreator" flags="nn" index="1pGfFk" />
       <concept id="1107535904670" name="jetbrains.mps.baseLanguage.structure.ClassifierType" flags="in" index="3uibUv">
         <reference id="1107535924139" name="classifier" index="3uigEE" />
       </concept>
@@ -116,9 +120,16 @@
         <child id="1178549979242" name="visibility" index="1B3o_S" />
       </concept>
       <concept id="1082113931046" name="jetbrains.mps.baseLanguage.structure.ContinueStatement" flags="nn" index="3N13vt" />
+      <concept id="6329021646629104957" name="jetbrains.mps.baseLanguage.structure.TextCommentPart" flags="nn" index="3SKdUq">
+        <property id="6329021646629104958" name="text" index="3SKdUp" />
+      </concept>
+      <concept id="6329021646629104954" name="jetbrains.mps.baseLanguage.structure.SingleLineComment" flags="nn" index="3SKdUt">
+        <child id="6329021646629175155" name="commentPart" index="3SKWNk" />
+      </concept>
       <concept id="1146644602865" name="jetbrains.mps.baseLanguage.structure.PublicVisibility" flags="nn" index="3Tm1VV" />
     </language>
     <language id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel">
+      <concept id="1179409122411" name="jetbrains.mps.lang.smodel.structure.Node_ConceptMethodCall" flags="nn" index="2qgKlT" />
       <concept id="1180636770613" name="jetbrains.mps.lang.smodel.structure.SNodeCreator" flags="nn" index="3zrR0B">
         <child id="1180636770616" name="createdType" index="3zrR0E" />
       </concept>
@@ -145,6 +156,12 @@
       </concept>
     </language>
     <language id="83888646-71ce-4f1c-9c53-c54016f6ad4f" name="jetbrains.mps.baseLanguage.collections">
+      <concept id="540871147943773365" name="jetbrains.mps.baseLanguage.collections.structure.SingleArgumentSequenceOperation" flags="nn" index="25WWJ4">
+        <child id="540871147943773366" name="argument" index="25WWJ7" />
+      </concept>
+      <concept id="1151688443754" name="jetbrains.mps.baseLanguage.collections.structure.ListType" flags="in" index="_YKpA">
+        <child id="1151688676805" name="elementType" index="_ZDj9" />
+      </concept>
       <concept id="1153943597977" name="jetbrains.mps.baseLanguage.collections.structure.ForEachStatement" flags="nn" index="2Gpval">
         <child id="1153944400369" name="variable" index="2Gsz3X" />
         <child id="1153944424730" name="inputSequence" index="2GsD0m" />
@@ -153,6 +170,13 @@
       <concept id="1153944233411" name="jetbrains.mps.baseLanguage.collections.structure.ForEachVariableReference" flags="nn" index="2GrUjf">
         <reference id="1153944258490" name="variable" index="2Gs0qQ" />
       </concept>
+      <concept id="1237721394592" name="jetbrains.mps.baseLanguage.collections.structure.AbstractContainerCreator" flags="nn" index="HWqM0">
+        <child id="1237721435807" name="elementType" index="HW$YZ" />
+      </concept>
+      <concept id="1227022210526" name="jetbrains.mps.baseLanguage.collections.structure.ClearAllElementsOperation" flags="nn" index="2Kehj3" />
+      <concept id="1160600644654" name="jetbrains.mps.baseLanguage.collections.structure.ListCreatorWithInit" flags="nn" index="Tc6Ow" />
+      <concept id="1160612413312" name="jetbrains.mps.baseLanguage.collections.structure.AddElementOperation" flags="nn" index="TSZUe" />
+      <concept id="1176501494711" name="jetbrains.mps.baseLanguage.collections.structure.IsNotEmptyOperation" flags="nn" index="3GX2aA" />
     </language>
   </registry>
   <node concept="13h7C7" id="50fOG01VxdN">
@@ -468,6 +492,282 @@
         </node>
       </node>
       <node concept="3cqZAl" id="5TPcprhGEaj" role="3clF45" />
+    </node>
+  </node>
+  <node concept="13h7C7" id="5TPcprixW1K">
+    <ref role="13h7C2" to="tno8:5TPcprixW1$" resolve="CloudFileMatcher" />
+    <node concept="13hLZK" id="5TPcprixW1L" role="13h7CW">
+      <node concept="3clFbS" id="5TPcprixW1M" role="2VODD2">
+        <node concept="3clFbF" id="5TPcpriz0xj" role="3cqZAp">
+          <node concept="37vLTI" id="5TPcpriz0Dk" role="3clFbG">
+            <node concept="Xl_RD" id="5TPcpriz0DR" role="37vLTx">
+              <property role="Xl_RC" value="gs://" />
+            </node>
+            <node concept="2OqwBi" id="5TPcpriz0z6" role="37vLTJ">
+              <node concept="13iPFW" id="5TPcpriz0xi" role="2Oq$k0" />
+              <node concept="3TrcHB" id="5TPcpriCD3n" role="2OqNvi">
+                <ref role="3TsBF5" to="tno8:5TPcpriAwbn" resolve="URL" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="5TPcpriDLyk" role="3cqZAp">
+          <node concept="37vLTI" id="5TPcpriDLDM" role="3clFbG">
+            <node concept="2ShNRf" id="5TPcpriDLFo" role="37vLTx">
+              <node concept="3zrR0B" id="5TPcpriDLEq" role="2ShVmc">
+                <node concept="3Tqbb2" id="5TPcpriDLEr" role="3zrR0E">
+                  <ref role="ehGHo" to="i5dl:7ixBNUaDRQi" resolve="CloudFolder" />
+                </node>
+              </node>
+            </node>
+            <node concept="2OqwBi" id="5TPcpriDL$u" role="37vLTJ">
+              <node concept="13iPFW" id="5TPcpriDLyi" role="2Oq$k0" />
+              <node concept="3TrEf2" id="5TPcpriDLC8" role="2OqNvi">
+                <ref role="3Tt5mk" to="tno8:5TPcpriCng9" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="13i0hz" id="5TPcprixW1N" role="13h7CS">
+      <property role="TrG5h" value="removeProperty" />
+      <property role="13i0it" value="false" />
+      <property role="13i0iv" value="false" />
+      <ref role="13i0hy" to="mqvz:2aFge8hFtpX" resolve="removeProperty" />
+      <node concept="3Tm1VV" id="5TPcprixW1O" role="1B3o_S" />
+      <node concept="3clFbS" id="5TPcprixW1R" role="3clF47">
+        <node concept="3clFbF" id="5TPcpriA4mp" role="3cqZAp">
+          <node concept="2OqwBi" id="5TPcpriA4x6" role="3clFbG">
+            <node concept="2OqwBi" id="5TPcpriA4nZ" role="2Oq$k0">
+              <node concept="13iPFW" id="5TPcpriA4mo" role="2Oq$k0" />
+              <node concept="3TrEf2" id="5TPcpriCnm5" role="2OqNvi">
+                <ref role="3Tt5mk" to="tno8:5TPcpriCng9" />
+              </node>
+            </node>
+            <node concept="1PgB_6" id="5TPcpriA4_6" role="2OqNvi" />
+          </node>
+        </node>
+      </node>
+      <node concept="3cqZAl" id="5TPcprixW1S" role="3clF45" />
+    </node>
+    <node concept="13i0hz" id="5TPcprizfOv" role="13h7CS">
+      <property role="TrG5h" value="match" />
+      <node concept="3Tm1VV" id="5TPcprizfOw" role="1B3o_S" />
+      <node concept="3cqZAl" id="5TPcprizfPf" role="3clF45" />
+      <node concept="3clFbS" id="5TPcprizfOy" role="3clF47" />
+    </node>
+    <node concept="13i0hz" id="5TPcprizfPS" role="13h7CS">
+      <property role="TrG5h" value="getFiles" />
+      <node concept="3Tm1VV" id="5TPcprizfPT" role="1B3o_S" />
+      <node concept="3cqZAl" id="5TPcprizfQA" role="3clF45" />
+      <node concept="3clFbS" id="5TPcprizfPV" role="3clF47">
+        <node concept="3cpWs8" id="5TPcpriFWEO" role="3cqZAp">
+          <node concept="3cpWsn" id="5TPcpriFWER" role="3cpWs9">
+            <property role="TrG5h" value="URL" />
+            <node concept="17QB3L" id="5TPcpriFWEM" role="1tU5fm" />
+            <node concept="2OqwBi" id="5TPcpriFXJ4" role="33vP2m">
+              <node concept="13iPFW" id="5TPcpriFXGO" role="2Oq$k0" />
+              <node concept="3TrcHB" id="5TPcpriFXN3" role="2OqNvi">
+                <ref role="3TsBF5" to="tno8:5TPcpriAwbn" resolve="URL" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3cpWs8" id="5TPcpriFRDm" role="3cqZAp">
+          <node concept="3cpWsn" id="5TPcpriFRDn" role="3cpWs9">
+            <property role="TrG5h" value="matcher" />
+            <node concept="3uibUv" id="5TPcpriFRDo" role="1tU5fm">
+              <ref role="3uigEE" to="nd5s:~CloudMatcher" resolve="CloudMatcher" />
+            </node>
+            <node concept="2ShNRf" id="5TPcpriFSEI" role="33vP2m">
+              <node concept="1pGfFk" id="5TPcpriFSKV" role="2ShVmc">
+                <ref role="37wK5l" to="nd5s:~CloudMatcher.&lt;init&gt;(java.lang.String)" resolve="CloudMatcher" />
+                <node concept="2OqwBi" id="5TPcpriFSNi" role="37wK5m">
+                  <node concept="13iPFW" id="5TPcpriFSL9" role="2Oq$k0" />
+                  <node concept="3TrcHB" id="5TPcpriFSR9" role="2OqNvi">
+                    <ref role="3TsBF5" to="tno8:5TPcprixW1_" resolve="expression" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="5TPcpriFpn0" role="3cqZAp">
+          <node concept="2OqwBi" id="5TPcpriFpyh" role="3clFbG">
+            <node concept="2OqwBi" id="5TPcpriFpoA" role="2Oq$k0">
+              <node concept="13iPFW" id="5TPcpriFpmZ" role="2Oq$k0" />
+              <node concept="3TrEf2" id="5TPcpriFpsg" role="2OqNvi">
+                <ref role="3Tt5mk" to="tno8:5TPcpriCng9" />
+              </node>
+            </node>
+            <node concept="2qgKlT" id="5TPcpriFpAH" role="2OqNvi">
+              <ref role="37wK5l" to="ybad:KFEEYuMBd1" resolve="getFiles" />
+              <node concept="37vLTw" id="5TPcpriFpCc" role="37wK5m">
+                <ref role="3cqZAo" node="5TPcpriFWER" resolve="URL" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3cpWs8" id="5TPcpriFuFl" role="3cqZAp">
+          <node concept="3cpWsn" id="5TPcpriFuFo" role="3cpWs9">
+            <property role="TrG5h" value="parsedFiles" />
+            <node concept="_YKpA" id="5TPcpriFuFh" role="1tU5fm">
+              <node concept="3Tqbb2" id="5TPcpriFuKt" role="_ZDj9">
+                <ref role="ehGHo" to="i5dl:7KKHtkJoTp5" resolve="FileOnCloud" />
+              </node>
+            </node>
+            <node concept="2ShNRf" id="5TPcpriFuKY" role="33vP2m">
+              <node concept="Tc6Ow" id="5TPcpriFviE" role="2ShVmc">
+                <node concept="3Tqbb2" id="5TPcpriFvtF" role="HW$YZ">
+                  <ref role="ehGHo" to="i5dl:7KKHtkJoTp5" resolve="FileOnCloud" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbJ" id="5TPcpriFpFo" role="3cqZAp">
+          <node concept="3clFbS" id="5TPcpriFpFq" role="3clFbx">
+            <node concept="3SKdUt" id="5TPcpriFrGD" role="3cqZAp">
+              <node concept="3SKdUq" id="5TPcpriFrGF" role="3SKWNk">
+                <property role="3SKdUp" value="get the files and parse its name based on matching regex" />
+              </node>
+            </node>
+            <node concept="3cpWs8" id="5TPcpriFu0w" role="3cqZAp">
+              <node concept="3cpWsn" id="5TPcpriFu0z" role="3cpWs9">
+                <property role="TrG5h" value="unparsedFiles" />
+                <node concept="_YKpA" id="5TPcpriFu0s" role="1tU5fm">
+                  <node concept="3Tqbb2" id="5TPcpriFu0F" role="_ZDj9">
+                    <ref role="ehGHo" to="i5dl:7KKHtkJoTp5" resolve="FileOnCloud" />
+                  </node>
+                </node>
+                <node concept="2OqwBi" id="5TPcpriFucJ" role="33vP2m">
+                  <node concept="2OqwBi" id="5TPcpriFu3d" role="2Oq$k0">
+                    <node concept="13iPFW" id="5TPcpriFu12" role="2Oq$k0" />
+                    <node concept="3TrEf2" id="5TPcpriFu7e" role="2OqNvi">
+                      <ref role="3Tt5mk" to="tno8:5TPcpriCng9" />
+                    </node>
+                  </node>
+                  <node concept="3Tsc0h" id="5TPcpriFuh6" role="2OqNvi">
+                    <ref role="3TtcxE" to="i5dl:7KKHtkJoTp3" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="2Gpval" id="5TPcpriFujN" role="3cqZAp">
+              <node concept="2GrKxI" id="5TPcpriFujP" role="2Gsz3X">
+                <property role="TrG5h" value="file" />
+              </node>
+              <node concept="37vLTw" id="5TPcpriFulz" role="2GsD0m">
+                <ref role="3cqZAo" node="5TPcpriFu0z" resolve="unparsedFiles" />
+              </node>
+              <node concept="3clFbS" id="5TPcpriFujT" role="2LFqv$">
+                <node concept="3cpWs8" id="5TPcpriFumt" role="3cqZAp">
+                  <node concept="3cpWsn" id="5TPcpriFumw" role="3cpWs9">
+                    <property role="TrG5h" value="name" />
+                    <node concept="17QB3L" id="5TPcpriFums" role="1tU5fm" />
+                    <node concept="2OqwBi" id="5TPcpriFupi" role="33vP2m">
+                      <node concept="2GrUjf" id="5TPcpriFumL" role="2Oq$k0">
+                        <ref role="2Gs0qQ" node="5TPcpriFujP" resolve="file" />
+                      </node>
+                      <node concept="3TrcHB" id="5TPcpriFuv3" role="2OqNvi">
+                        <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node concept="3clFbJ" id="5TPcpriFT0h" role="3cqZAp">
+                  <node concept="3clFbS" id="5TPcpriFT0j" role="3clFbx">
+                    <node concept="3clFbF" id="5TPcpriFvxs" role="3cqZAp">
+                      <node concept="2OqwBi" id="5TPcpriFvY8" role="3clFbG">
+                        <node concept="37vLTw" id="5TPcpriFvxq" role="2Oq$k0">
+                          <ref role="3cqZAo" node="5TPcpriFuFo" resolve="parsedFiles" />
+                        </node>
+                        <node concept="TSZUe" id="5TPcpriFy1j" role="2OqNvi">
+                          <node concept="2GrUjf" id="5TPcpriFy3n" role="25WWJ7">
+                            <ref role="2Gs0qQ" node="5TPcpriFujP" resolve="file" />
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="2OqwBi" id="5TPcpriFT1g" role="3clFbw">
+                    <node concept="37vLTw" id="5TPcpriFT0H" role="2Oq$k0">
+                      <ref role="3cqZAo" node="5TPcpriFRDn" resolve="matcher" />
+                    </node>
+                    <node concept="liA8E" id="5TPcpriFT2n" role="2OqNvi">
+                      <ref role="37wK5l" to="nd5s:~CloudMatcher.matches(java.lang.String):boolean" resolve="matches" />
+                      <node concept="37vLTw" id="5TPcpriFT2E" role="37wK5m">
+                        <ref role="3cqZAo" node="5TPcpriFumw" resolve="name" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="2OqwBi" id="5TPcpriFqFE" role="3clFbw">
+            <node concept="2OqwBi" id="5TPcpriFpZ3" role="2Oq$k0">
+              <node concept="2OqwBi" id="5TPcpriFpIc" role="2Oq$k0">
+                <node concept="13iPFW" id="5TPcpriFpFY" role="2Oq$k0" />
+                <node concept="3TrEf2" id="5TPcpriFpTD" role="2OqNvi">
+                  <ref role="3Tt5mk" to="tno8:5TPcpriCng9" />
+                </node>
+              </node>
+              <node concept="3Tsc0h" id="5TPcpriFq4D" role="2OqNvi">
+                <ref role="3TtcxE" to="i5dl:7KKHtkJoTp3" />
+              </node>
+            </node>
+            <node concept="3GX2aA" id="5TPcpriFrET" role="2OqNvi" />
+          </node>
+        </node>
+        <node concept="3clFbF" id="5TPcpriFyaW" role="3cqZAp">
+          <node concept="2OqwBi" id="5TPcpriF$1b" role="3clFbG">
+            <node concept="2OqwBi" id="5TPcpriFywo" role="2Oq$k0">
+              <node concept="2OqwBi" id="5TPcpriFyfY" role="2Oq$k0">
+                <node concept="13iPFW" id="5TPcpriFyaU" role="2Oq$k0" />
+                <node concept="3TrEf2" id="5TPcpriFyrn" role="2OqNvi">
+                  <ref role="3Tt5mk" to="tno8:5TPcpriCng9" />
+                </node>
+              </node>
+              <node concept="3Tsc0h" id="5TPcpriFyLS" role="2OqNvi">
+                <ref role="3TtcxE" to="i5dl:7KKHtkJoTp3" />
+              </node>
+            </node>
+            <node concept="2Kehj3" id="5TPcpriFB1b" role="2OqNvi" />
+          </node>
+        </node>
+        <node concept="2Gpval" id="5TPcpriFG43" role="3cqZAp">
+          <node concept="2GrKxI" id="5TPcpriFG45" role="2Gsz3X">
+            <property role="TrG5h" value="file" />
+          </node>
+          <node concept="37vLTw" id="5TPcpriFH1B" role="2GsD0m">
+            <ref role="3cqZAo" node="5TPcpriFuFo" resolve="parsedFiles" />
+          </node>
+          <node concept="3clFbS" id="5TPcpriFG49" role="2LFqv$">
+            <node concept="3clFbF" id="5TPcpriM73e" role="3cqZAp">
+              <node concept="2OqwBi" id="5TPcpriM7Tb" role="3clFbG">
+                <node concept="2OqwBi" id="5TPcpriM7gz" role="2Oq$k0">
+                  <node concept="2OqwBi" id="5TPcpriM76g" role="2Oq$k0">
+                    <node concept="13iPFW" id="5TPcpriM73d" role="2Oq$k0" />
+                    <node concept="3TrEf2" id="5TPcpriM79U" role="2OqNvi">
+                      <ref role="3Tt5mk" to="tno8:5TPcpriCng9" />
+                    </node>
+                  </node>
+                  <node concept="3Tsc0h" id="5TPcpriM7kZ" role="2OqNvi">
+                    <ref role="3TtcxE" to="i5dl:7KKHtkJoTp3" />
+                  </node>
+                </node>
+                <node concept="TSZUe" id="5TPcpriMaSV" role="2OqNvi">
+                  <node concept="2GrUjf" id="5TPcpriMb18" role="25WWJ7">
+                    <ref role="2Gs0qQ" node="5TPcpriFG45" resolve="file" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
     </node>
   </node>
 </model>

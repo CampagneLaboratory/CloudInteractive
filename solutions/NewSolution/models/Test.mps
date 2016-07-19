@@ -40,6 +40,9 @@
         <property id="8663900622043508062" name="part" index="q33rC" />
         <property id="8663900622046639162" name="isDirectory" index="qn6Yc" />
       </concept>
+      <concept id="5575801756724620905" name="org.campagnelab.nyosh.interactive.structure.File" flags="ng" index="2EWdhe">
+        <property id="5575801756724621394" name="fullPath" index="2EWcDP" />
+      </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
@@ -48,9 +51,18 @@
     </language>
     <language id="d24699a3-e8c4-48e6-93dd-88fb4f2f1c78" name="org.campagnelab.cloud.interactive">
       <concept id="1966179032220234204" name="org.campagnelab.cloud.interactive.structure.CloudPathPart" flags="ng" index="271ViP" />
+      <concept id="8948852386812892741" name="org.campagnelab.cloud.interactive.structure.FileOnCloud" flags="ng" index="1jkMeg">
+        <property id="774347578126010151" name="subdirectory" index="cnoSy" />
+        <property id="1401537737891124931" name="invalid" index="2dflnA" />
+      </concept>
       <concept id="6343989637686267033" name="org.campagnelab.cloud.interactive.structure.CloudConfig" flags="ng" index="3P1ILJ" />
       <concept id="6821066936200758168" name="org.campagnelab.cloud.interactive.structure.CloudInteractivePath" flags="ng" index="1RKsY_">
         <reference id="788892055794057212" name="projectID" index="lisFp" />
+      </concept>
+      <concept id="8404173470613077394" name="org.campagnelab.cloud.interactive.structure.CloudFolder" flags="ng" index="3Y1IaG">
+        <property id="3214350917729639320" name="valid" index="Q8B2T" />
+        <property id="8404173470613095980" name="URL" index="3Y1_$i" />
+        <child id="8948852386812892739" name="files" index="1jkMem" />
       </concept>
     </language>
   </registry>
@@ -62,6 +74,34 @@
     <node concept="271ViP" id="5TPcpriwNPn" role="q33rI">
       <property role="q33rC" value="" />
       <property role="qn6Yc" value="true" />
+    </node>
+  </node>
+  <node concept="3Y1IaG" id="5TPcpriD9EZ">
+    <property role="Q8B2T" value="true" />
+    <property role="3Y1_$i" value="gs://wcmc_nw_training_data/" />
+    <node concept="1jkMeg" id="5TPcpriD9F0" role="1jkMem">
+      <property role="2dflnA" value="false" />
+      <property role="cnoSy" value="" />
+      <property role="TrG5h" value="testOne.txt" />
+      <property role="2EWcDP" value="gs://wcmc_nw_training_data/" />
+    </node>
+    <node concept="1jkMeg" id="5TPcpriD9F1" role="1jkMem">
+      <property role="2dflnA" value="false" />
+      <property role="cnoSy" value="" />
+      <property role="TrG5h" value="testThree.txt" />
+      <property role="2EWcDP" value="gs://wcmc_nw_training_data/" />
+    </node>
+    <node concept="1jkMeg" id="5TPcpriD9F2" role="1jkMem">
+      <property role="2dflnA" value="false" />
+      <property role="cnoSy" value="" />
+      <property role="TrG5h" value="testTwo.txt" />
+      <property role="2EWcDP" value="gs://wcmc_nw_training_data/" />
+    </node>
+    <node concept="1jkMeg" id="5TPcpriD9F3" role="1jkMem">
+      <property role="2dflnA" value="false" />
+      <property role="cnoSy" value="" />
+      <property role="TrG5h" value="testZero.pdf" />
+      <property role="2EWcDP" value="gs://wcmc_nw_training_data/" />
     </node>
   </node>
 </model>
