@@ -71,12 +71,13 @@
     <property role="34LRSv" value="cloud file matcher" />
     <property role="R4oN_" value="files matching regex or wildcard" />
     <ref role="1TJDcQ" to="iowz:3aOvEIt8nXt" resolve="NewChannelInitializerExpression" />
+    <node concept="1TJgyj" id="5TPcpriY1Bf" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="URL" />
+      <ref role="20lvS9" to="i5dl:5UDj3ODq8eo" resolve="CloudInteractivePath" />
+    </node>
     <node concept="1TJgyi" id="5TPcprixW1_" role="1TKVEl">
       <property role="TrG5h" value="expression" />
-      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
-    </node>
-    <node concept="1TJgyi" id="5TPcpriAwbn" role="1TKVEl">
-      <property role="TrG5h" value="URL" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
     <node concept="1TJgyj" id="5TPcpriCng9" role="1TKVEi">

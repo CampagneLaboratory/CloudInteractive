@@ -135,14 +135,8 @@
           <property role="3F0ifm" value="cloud files from URL: " />
           <ref role="1k5W1q" to="ki0w:5HJ0Qzylzqv" resolve="Descriptive" />
         </node>
-        <node concept="3F0A7n" id="5TPcprixWgQ" role="3EZMnx">
-          <ref role="1NtTu8" to="tno8:5TPcpriAwbn" resolve="URL" />
-          <node concept="VechU" id="5TPcprizdvt" role="3F10Kt">
-            <property role="Vb096" value="DARK_GREEN" />
-          </node>
-        </node>
-        <node concept="3F0ifn" id="5TPcpriBbJ4" role="3EZMnx">
-          <property role="3F0ifm" value="" />
+        <node concept="3F1sOY" id="5TPcpriY1CF" role="3EZMnx">
+          <ref role="1NtTu8" to="tno8:5TPcpriY1Bf" />
         </node>
         <node concept="3F0ifn" id="5TPcpriAwaV" role="3EZMnx">
           <property role="3F0ifm" value="matching expression: " />
@@ -174,9 +168,6 @@
         </node>
       </node>
       <node concept="3EZMnI" id="5TPcpriPY5o" role="3EZMnx">
-        <node concept="3F0ifn" id="5TPcpriQ5Rn" role="3EZMnx">
-          <property role="3F0ifm" value="[" />
-        </node>
         <node concept="1iCGBv" id="5TPcpriPY64" role="3EZMnx">
           <ref role="1NtTu8" to="tno8:5TPcpriCng9" />
           <node concept="1sVBvm" id="5TPcpriPY66" role="1sWHZn">
@@ -187,14 +178,11 @@
                 <ref role="1NtTu8" to="i5dl:7KKHtkJoTp3" />
                 <node concept="l2Vlx" id="5TPcpriQDQ0" role="2czzBx" />
               </node>
-              <node concept="2iRfu4" id="5TPcpriQ$oa" role="2iSdaV" />
+              <node concept="2iRkQZ" id="5TPcpriXoRU" role="2iSdaV" />
             </node>
           </node>
         </node>
         <node concept="2iRfu4" id="5TPcpriQ0G5" role="2iSdaV" />
-      </node>
-      <node concept="3F0ifn" id="5TPcpriQpqu" role="3EZMnx">
-        <property role="3F0ifm" value="]" />
       </node>
     </node>
   </node>
