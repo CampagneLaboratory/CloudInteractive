@@ -46,7 +46,7 @@
     <property role="R4oN_" value="Google Storage File Path Literal" />
     <property role="34LRSv" value="gs://" />
     <property role="3GE5qa" value="" />
-    <ref role="1TJDcQ" to="iowz:3aOvEIt8nXt" resolve="NewChannelInitializerExpression" />
+    <ref role="1TJDcQ" to="iowz:3aOvEIt8nSZ" resolve="PrimitiveTypeValue" />
     <node concept="1TJgyj" id="4ETRbBYeWnC" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="URL" />
@@ -57,8 +57,8 @@
     <property role="1pbfSe" value="996536537" />
     <property role="TrG5h" value="CloudFolderRef" />
     <property role="R4oN_" value="Google Storage Folder Literal" />
-    <property role="34LRSv" value="files from CloudFolder" />
-    <ref role="1TJDcQ" to="iowz:3aOvEIt8nXt" resolve="NewChannelInitializerExpression" />
+    <property role="34LRSv" value="bag of cloud files" />
+    <ref role="1TJDcQ" to="iowz:3aOvEIt8nSZ" resolve="PrimitiveTypeValue" />
     <node concept="1TJgyj" id="_nX$8M3vEo" role="1TKVEi">
       <property role="20lmBu" value="reference" />
       <property role="20kJfa" value="CloudFolder" />
@@ -70,7 +70,7 @@
     <property role="TrG5h" value="CloudFileMatcher" />
     <property role="34LRSv" value="cloud file matcher" />
     <property role="R4oN_" value="files matching regex or wildcard" />
-    <ref role="1TJDcQ" to="iowz:3aOvEIt8nXt" resolve="NewChannelInitializerExpression" />
+    <ref role="1TJDcQ" to="iowz:3aOvEIt8nSZ" resolve="PrimitiveTypeValue" />
     <node concept="1TJgyj" id="5TPcpriY1Bf" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="URL" />

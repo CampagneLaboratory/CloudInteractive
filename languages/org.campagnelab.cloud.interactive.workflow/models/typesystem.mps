@@ -105,5 +105,28 @@
       <ref role="1YaFvo" to="tno8:_nX$8M3vEn" resolve="CloudFolderRef" />
     </node>
   </node>
+  <node concept="1YbPZF" id="5TPcprj8OOa">
+    <property role="TrG5h" value="typeof_CloudFileMatcher" />
+    <node concept="3clFbS" id="5TPcprj8OOb" role="18ibNy">
+      <node concept="1Z5TYs" id="5TPcprj8OOo" role="3cqZAp">
+        <node concept="mw_s8" id="5TPcprj8OOp" role="1ZfhKB">
+          <node concept="2c44tf" id="5TPcprj8OOq" role="mwGJk">
+            <node concept="16pbKc" id="5TPcprj8OOr" role="2c44tc" />
+          </node>
+        </node>
+        <node concept="mw_s8" id="5TPcprj8OOs" role="1ZfhK$">
+          <node concept="1Z2H0r" id="5TPcprj8OOt" role="mwGJk">
+            <node concept="1YBJjd" id="5TPcprj8OPp" role="1Z2MuG">
+              <ref role="1YBMHb" node="5TPcprj8OOd" resolve="cloudFileMatcher" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="5TPcprj8OOd" role="1YuTPh">
+      <property role="TrG5h" value="cloudFileMatcher" />
+      <ref role="1YaFvo" to="tno8:5TPcprixW1$" resolve="CloudFileMatcher" />
+    </node>
+  </node>
 </model>
 
