@@ -80,6 +80,18 @@
       <property role="TrG5h" value="expression" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
+    <node concept="1TJgyi" id="7EIz3X0$Z5" role="1TKVEl">
+      <property role="TrG5h" value="count" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="7EIz3X2Gl6" role="1TKVEl">
+      <property role="TrG5h" value="index" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="1qtGaFjpzaH" role="1TKVEl">
+      <property role="TrG5h" value="regex" />
+      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
+    </node>
     <node concept="1TJgyj" id="5TPcpriCng9" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="folder" />
