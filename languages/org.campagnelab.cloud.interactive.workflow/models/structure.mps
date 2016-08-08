@@ -109,7 +109,7 @@
     <property role="1pbfSe" value="1808100948" />
     <property role="TrG5h" value="WildcardExpression" />
     <property role="34LRSv" value="wildcard" />
-    <property role="R4oN_" value="Wildcard expression" />
+    <property role="R4oN_" value="wildcard string" />
     <ref role="1TJDcQ" node="7zis7bNfz5T" resolve="SearchExpression" />
     <node concept="1TJgyi" id="7zis7bNpMcD" role="1TKVEl">
       <property role="TrG5h" value="expression" />
@@ -122,7 +122,7 @@
     <property role="R5$K7" value="false" />
     <property role="R5$K2" value="false" />
     <property role="34LRSv" value="regex" />
-    <property role="R4oN_" value="Regular Expression" />
+    <property role="R4oN_" value="regex builder" />
     <ref role="1TJDcQ" node="7zis7bNfz5T" resolve="SearchExpression" />
     <node concept="1TJgyj" id="7zis7bNooqT" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />

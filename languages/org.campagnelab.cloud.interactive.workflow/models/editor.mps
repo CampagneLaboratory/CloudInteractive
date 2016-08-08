@@ -35,7 +35,9 @@
       <concept id="1186403694788" name="jetbrains.mps.lang.editor.structure.ColorStyleClassItem" flags="ln" index="VaVBg">
         <property id="1186403713874" name="color" index="Vb096" />
       </concept>
-      <concept id="1186403751766" name="jetbrains.mps.lang.editor.structure.FontStyleStyleClassItem" flags="ln" index="Vb9p2" />
+      <concept id="1186403751766" name="jetbrains.mps.lang.editor.structure.FontStyleStyleClassItem" flags="ln" index="Vb9p2">
+        <property id="1186403771423" name="style" index="Vbekb" />
+      </concept>
       <concept id="1186404549998" name="jetbrains.mps.lang.editor.structure.ForegroundColorStyleClassItem" flags="ln" index="VechU" />
       <concept id="1088013125922" name="jetbrains.mps.lang.editor.structure.CellModel_RefCell" flags="sg" stub="730538219795941030" index="1iCGBv">
         <child id="1088186146602" name="editorComponent" index="1sWHZn" />
@@ -390,6 +392,12 @@
     <ref role="1XX52x" to="tno8:7zis7bMWJRy" resolve="WildcardExpression" />
     <node concept="3F0A7n" id="7zis7bNpMdc" role="2wV5jI">
       <ref role="1NtTu8" to="tno8:7zis7bNpMcD" resolve="expression" />
+      <node concept="VechU" id="7zis7bNrquP" role="3F10Kt">
+        <property role="Vb096" value="DARK_GREEN" />
+      </node>
+      <node concept="Vb9p2" id="7zis7bNsA$A" role="3F10Kt">
+        <property role="Vbekb" value="BOLD" />
+      </node>
     </node>
   </node>
   <node concept="24kQdi" id="7zis7bNpMdl">
