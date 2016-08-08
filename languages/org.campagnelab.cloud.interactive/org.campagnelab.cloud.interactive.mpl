@@ -16,7 +16,6 @@
       <sourceRoot location="google-oauth-client-java6-1.21.0.jar" />
       <sourceRoot location="google-oauth-client-jetty-1.21.0.jar" />
       <sourceRoot location="guava-jdk5-13.0.jar" />
-      <sourceRoot location="gwt-user-1.6.4.jar" />
       <sourceRoot location="hamcrest-core-1.3.jar" />
       <sourceRoot location="httpclient-4.0.1.jar" />
       <sourceRoot location="httpcore-4.0.1.jar" />
@@ -92,7 +91,6 @@
     <stubModelEntry path="${module}/google-oauth-client-java6-1.21.0.jar" />
     <stubModelEntry path="${module}/google-oauth-client-jetty-1.21.0.jar" />
     <stubModelEntry path="${module}/guava-jdk5-13.0.jar" />
-    <stubModelEntry path="${module}/gwt-user-1.6.4.jar" />
     <stubModelEntry path="${module}/hamcrest-core-1.3.jar" />
     <stubModelEntry path="${module}/httpclient-4.0.1.jar" />
     <stubModelEntry path="${module}/httpcore-4.0.1.jar" />

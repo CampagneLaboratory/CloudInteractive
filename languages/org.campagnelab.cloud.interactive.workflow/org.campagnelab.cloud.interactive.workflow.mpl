@@ -6,8 +6,6 @@
     </modelRoot>
     <modelRoot contentPath="${module}" type="java_classes">
       <sourceRoot location="CloudMatcher-1.0-SNAPSHOT.jar" />
-      <sourceRoot location="ant-1.8.2.jar" />
-      <sourceRoot location="ant-launcher-1.8.2.jar" />
     </modelRoot>
   </models>
   <accessoryModels />
@@ -77,8 +75,6 @@
   </generators>
   <stubModelEntries>
     <stubModelEntry path="${module}/CloudMatcher-1.0-SNAPSHOT.jar" />
-    <stubModelEntry path="${module}/ant-1.8.2.jar" />
-    <stubModelEntry path="${module}/ant-launcher-1.8.2.jar" />
   </stubModelEntries>
   <sourcePath />
   <dependencies>
@@ -102,6 +98,7 @@
     <language id="f2801650-65d5-424e-bb1b-463a8781b786" fqName="jetbrains.mps.baseLanguage.javadoc" version="2" />
     <language id="c7d5b9dd-a05f-4be2-bc73-f2e16994cc67" fqName="jetbrains.mps.baseLanguage.lightweightdsl" version="1" />
     <language id="760a0a8c-eabb-4521-8bfd-65db761a9ba3" fqName="jetbrains.mps.baseLanguage.logging" version="0" />
+    <language id="daafa647-f1f7-4b0b-b096-69cd7c8408c0" fqName="jetbrains.mps.baseLanguage.regexp" version="0" />
     <language id="a247e09e-2435-45ba-b8d2-07e93feba96a" fqName="jetbrains.mps.baseLanguage.tuples" version="0" />
     <language id="aee9cad2-acd4-4608-aef2-0004f6a1cdbd" fqName="jetbrains.mps.lang.actions" version="0" />
     <language id="af65afd8-f0dd-4942-87d9-63a55f2a9db1" fqName="jetbrains.mps.lang.behavior" version="0" />
