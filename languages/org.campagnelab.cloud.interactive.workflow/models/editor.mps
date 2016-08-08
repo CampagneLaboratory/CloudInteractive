@@ -62,7 +62,9 @@
       <concept id="1219418625346" name="jetbrains.mps.lang.editor.structure.IStyleContainer" flags="ng" index="3F0Thp">
         <child id="1219418656006" name="styleItem" index="3F10Kt" />
       </concept>
-      <concept id="1073389882823" name="jetbrains.mps.lang.editor.structure.CellModel_RefNode" flags="sg" stub="730538219795960754" index="3F1sOY" />
+      <concept id="1073389882823" name="jetbrains.mps.lang.editor.structure.CellModel_RefNode" flags="sg" stub="730538219795960754" index="3F1sOY">
+        <property id="16410578721444372" name="customizeEmptyCell" index="2ru_X1" />
+      </concept>
       <concept id="1073390211982" name="jetbrains.mps.lang.editor.structure.CellModel_RefNodeList" flags="sg" stub="2794558372793454595" index="3F2HdR" />
       <concept id="1166049232041" name="jetbrains.mps.lang.editor.structure.AbstractComponent" flags="ng" index="1XWOmA">
         <reference id="1166049300910" name="conceptDeclaration" index="1XX52x" />
@@ -170,39 +172,22 @@
           <property role="3F0ifm" value="matching expression: " />
           <ref role="1k5W1q" to="ki0w:5HJ0Qzylzqv" resolve="Descriptive" />
         </node>
-        <node concept="3F0A7n" id="5TPcpriA$EG" role="3EZMnx">
-          <ref role="1NtTu8" to="tno8:5TPcprixW1_" resolve="expression" />
-          <node concept="VechU" id="5TPcpriA$F$" role="3F10Kt">
-            <property role="Vb096" value="DARK_GREEN" />
-          </node>
+        <node concept="3F1sOY" id="7zis7bMWK3s" role="3EZMnx">
+          <property role="2ru_X1" value="true" />
+          <ref role="1NtTu8" to="tno8:7zis7bNfz5x" />
         </node>
-        <node concept="3F0ifn" id="5TPcpriBevf" role="3EZMnx">
+        <node concept="3F0ifn" id="7zis7bNobyy" role="3EZMnx">
           <property role="3F0ifm" value="" />
         </node>
-        <node concept="ykhUs" id="5TPcpriBevq" role="3EZMnx">
-          <property role="ykhUg" value="Regex Preview" />
-          <node concept="ykhUf" id="5TPcpriBevr" role="ynkVX">
-            <node concept="3clFbS" id="5TPcpriBevs" role="2VODD2">
-              <node concept="3clFbF" id="5TPcpriD78W" role="3cqZAp">
-                <node concept="2OqwBi" id="5TPcpriFT8I" role="3clFbG">
-                  <node concept="1VaYGm" id="5TPcpriFT73" role="2Oq$k0" />
-                  <node concept="2qgKlT" id="1qtGaFjm_sL" role="2OqNvi">
-                    <ref role="37wK5l" to="x9kw:1qtGaFjmigr" resolve="getFirstRegexFiles" />
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
         <node concept="ykhUs" id="1qtGaFjp7ZF" role="3EZMnx">
-          <property role="ykhUg" value="Wildcard Preview" />
+          <property role="ykhUg" value="Preview" />
           <node concept="ykhUf" id="1qtGaFjp7ZG" role="ynkVX">
             <node concept="3clFbS" id="1qtGaFjp7ZH" role="2VODD2">
               <node concept="3clFbF" id="1qtGaFjpgJn" role="3cqZAp">
                 <node concept="2OqwBi" id="1qtGaFjpgQ9" role="3clFbG">
                   <node concept="1VaYGm" id="1qtGaFjpgJm" role="2Oq$k0" />
-                  <node concept="2qgKlT" id="1qtGaFjph09" role="2OqNvi">
-                    <ref role="37wK5l" to="x9kw:1qtGaFjpceB" resolve="getFirstWildcardFiles" />
+                  <node concept="2qgKlT" id="7zis7bMWXIl" role="2OqNvi">
+                    <ref role="37wK5l" to="x9kw:7zis7bMWPdb" resolve="getFirstFiles" />
                   </node>
                 </node>
               </node>
@@ -399,6 +384,18 @@
           </node>
         </node>
       </node>
+    </node>
+  </node>
+  <node concept="24kQdi" id="7zis7bNpMcL">
+    <ref role="1XX52x" to="tno8:7zis7bMWJRy" resolve="WildcardExpression" />
+    <node concept="3F0A7n" id="7zis7bNpMdc" role="2wV5jI">
+      <ref role="1NtTu8" to="tno8:7zis7bNpMcD" resolve="expression" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="7zis7bNpMdl">
+    <ref role="1XX52x" to="tno8:7zis7bNfz57" resolve="RegularExpression" />
+    <node concept="3F1sOY" id="7zis7bNpMdK" role="2wV5jI">
+      <ref role="1NtTu8" to="tno8:7zis7bNooqT" />
     </node>
   </node>
 </model>
