@@ -163,7 +163,7 @@
       <property role="TrG5h" value="mps_home" />
     </node>
     <node concept="2kB4xC" id="1EvOJKhuayt" role="1l3spd">
-      <property role="TrG5h" value="cloud_interactie_version" />
+      <property role="TrG5h" value="cloud_interactive_version" />
       <node concept="aVJcg" id="1EvOJKhukVa" role="aVJcv">
         <node concept="NbPM2" id="1EvOJKhukV9" role="aVJcq">
           <node concept="3Mxwew" id="1EvOJKhukV8" role="3MwsjC">
@@ -530,19 +530,6 @@
               </node>
             </node>
           </node>
-          <node concept="28jJK3" id="GHH7Qc9KNk" role="39821P">
-            <node concept="55IIr" id="GHH7Qc9KNl" role="28jJRO">
-              <node concept="2Ry0Ak" id="GHH7Qc9KNm" role="iGT6I">
-                <property role="2Ry0Am" value="languages" />
-                <node concept="2Ry0Ak" id="GHH7Qc9KNn" role="2Ry0An">
-                  <property role="2Ry0Am" value="org.campagnelab.cloud.interactive" />
-                  <node concept="2Ry0Ak" id="GHH7Qc9KVu" role="2Ry0An">
-                    <property role="2Ry0Am" value="gwt-user-1.6.4.jar" />
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
           <node concept="28jJK3" id="GHH7Qc9KLn" role="39821P">
             <node concept="55IIr" id="GHH7Qc9KLo" role="28jJRO">
               <node concept="2Ry0Ak" id="GHH7Qc9KLp" role="iGT6I">
@@ -660,32 +647,6 @@
               </node>
             </node>
           </node>
-          <node concept="28jJK3" id="GHH7QcaOJq" role="39821P">
-            <node concept="55IIr" id="GHH7QcaOJr" role="28jJRO">
-              <node concept="2Ry0Ak" id="GHH7QcaOJs" role="iGT6I">
-                <property role="2Ry0Am" value="languages" />
-                <node concept="2Ry0Ak" id="GHH7QcaOJt" role="2Ry0An">
-                  <property role="2Ry0Am" value="org.campagnelab.cloud.interactive.workflow" />
-                  <node concept="2Ry0Ak" id="GHH7QcaPMh" role="2Ry0An">
-                    <property role="2Ry0Am" value="ant-launcher-1.8.2.jar" />
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
-          <node concept="28jJK3" id="GHH7QcaON5" role="39821P">
-            <node concept="55IIr" id="GHH7QcaON6" role="28jJRO">
-              <node concept="2Ry0Ak" id="GHH7QcaON7" role="iGT6I">
-                <property role="2Ry0Am" value="languages" />
-                <node concept="2Ry0Ak" id="GHH7QcaON8" role="2Ry0An">
-                  <property role="2Ry0Am" value="org.campagnelab.cloud.interactive.workflow" />
-                  <node concept="2Ry0Ak" id="GHH7QcaOUU" role="2Ry0An">
-                    <property role="2Ry0Am" value="ant-1.8.2.jar" />
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
         </node>
       </node>
     </node>
@@ -698,7 +659,7 @@
       </node>
       <node concept="3_J27D" id="GHH7Qc9Cp_" role="m$_w8">
         <node concept="3Mxwey" id="GHH7Qc9IRk" role="3MwsjC">
-          <ref role="3Mxwex" node="1EvOJKhuayt" resolve="cloud_interactie_version" />
+          <ref role="3Mxwex" node="1EvOJKhuayt" resolve="cloud_interactive_version" />
         </node>
       </node>
       <node concept="m$f5U" id="GHH7Qc9CpB" role="m$_yh">
