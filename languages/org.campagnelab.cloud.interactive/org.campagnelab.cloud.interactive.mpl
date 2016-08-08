@@ -24,7 +24,6 @@
       <sourceRoot location="jetty-6.1.26.jar" />
       <sourceRoot location="jetty-util-6.1.26.jar" />
       <sourceRoot location="jsr305-1.3.9.jar" />
-      <sourceRoot location="junit-4.12.jar" />
       <sourceRoot location="servlet-api-2.5-20081211.jar" />
       <sourceRoot location="CloudPath-1.0.jar" />
     </modelRoot>
@@ -101,7 +100,6 @@
     <stubModelEntry path="${module}/jetty-6.1.26.jar" />
     <stubModelEntry path="${module}/jetty-util-6.1.26.jar" />
     <stubModelEntry path="${module}/jsr305-1.3.9.jar" />
-    <stubModelEntry path="${module}/junit-4.12.jar" />
     <stubModelEntry path="${module}/servlet-api-2.5-20081211.jar" />
     <stubModelEntry path="${module}/CloudRename-1.jar" />
     <stubModelEntry path="${module}/CloudPath-1.0.jar" />
