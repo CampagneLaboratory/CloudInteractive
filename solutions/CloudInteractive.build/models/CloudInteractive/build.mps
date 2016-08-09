@@ -370,7 +370,13 @@
       <node concept="3981dG" id="GHH7Qc9CpG" role="39821P">
         <node concept="3_J27D" id="GHH7Qc9CpH" role="Nbhlr">
           <node concept="3Mxwew" id="GHH7Qc9CpI" role="3MwsjC">
-            <property role="3MwjfP" value="CloudInteractive.zip" />
+            <property role="3MwjfP" value="CloudInteractive_" />
+          </node>
+          <node concept="3Mxwey" id="GHH7Qcz2Hm" role="3MwsjC">
+            <ref role="3Mxwex" node="1EvOJKhuayt" resolve="cloud_interactive_version" />
+          </node>
+          <node concept="3Mxwew" id="GHH7Qcz2Hl" role="3MwsjC">
+            <property role="3MwjfP" value=".zip" />
           </node>
         </node>
         <node concept="m$_wl" id="GHH7Qc9CpJ" role="39821P">
