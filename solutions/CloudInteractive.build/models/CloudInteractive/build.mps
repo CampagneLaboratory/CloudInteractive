@@ -101,6 +101,7 @@
         <child id="6592112598314499028" name="dependencies" index="m$_yJ" />
         <child id="6592112598314499021" name="name" index="m$_yQ" />
         <child id="6592112598314855574" name="containerName" index="m_cZH" />
+        <child id="2172791612906637490" name="description" index="3s6cr7" />
       </concept>
       <concept id="6592112598314498926" name="jetbrains.mps.build.mps.structure.BuildMpsLayout_Plugin" flags="ng" index="m$_wl">
         <reference id="6592112598314801433" name="plugin" index="m_rDy" />
@@ -712,6 +713,32 @@
       <node concept="2iUeEo" id="GHH7Qc9IT3" role="2iVFfd">
         <property role="2iUeEt" value="Campagne Laboratory" />
         <property role="2iUeEu" value="http://campagnelab.org/software/nextflow-workbench/" />
+      </node>
+      <node concept="3_J27D" id="GHH7QcyY6r" role="3s6cr7">
+        <node concept="3Mxwew" id="H0TQXNF9To" role="3MwsjC">
+          <property role="3MwjfP" value="The Cloud interactive is a set of languages developed with the Jetbrains MPS Language Workbench that make it easier to use Google Cloud buckets as process input for workflows created with Nextflow Workbench" />
+        </node>
+        <node concept="3Mxwew" id="1EvOJKhulyD" role="3MwsjC">
+          <property role="3MwjfP" value=" (see http://campagnelab.org/software/nextflow-workbench/)" />
+        </node>
+        <node concept="3Mxwew" id="1EvOJKhul8h" role="3MwsjC">
+          <property role="3MwjfP" value=". Reference build: " />
+        </node>
+        <node concept="3Mxwey" id="4RSqyaA4csT" role="3MwsjC">
+          <ref role="3Mxwex" node="4RSqyaA4c2V" resolve="build_number" />
+        </node>
+        <node concept="3Mxwew" id="5OPtsOYwok" role="3MwsjC">
+          <property role="3MwjfP" value=", commit: " />
+        </node>
+        <node concept="3Mxwey" id="5OPtsOYwoW" role="3MwsjC">
+          <ref role="3Mxwex" node="4RSqyaA6FWL" resolve="reference_commit" />
+        </node>
+        <node concept="3Mxwew" id="5OPtsOYwq4" role="3MwsjC">
+          <property role="3MwjfP" value=", branch: " />
+        </node>
+        <node concept="3Mxwey" id="5OPtsOYwqL" role="3MwsjC">
+          <ref role="3Mxwex" node="4RSqyaA6G6g" resolve="reference_branch" />
+        </node>
       </node>
     </node>
     <node concept="2G$12M" id="GHH7Qc9Cpx" role="3989C9">

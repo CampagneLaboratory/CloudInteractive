@@ -79,6 +79,7 @@
       <idea-plugin version="2" xmlns:xi="http://www.w3.org/2001/XInclude">
         <id>CloudInteractive</id>
         <name>org.campagnelab.CloudInteractive</name>
+        <description>The Cloud interactive is a set of languages developed with the Jetbrains MPS Language Workbench that make it easier to use Google Cloud buckets as process input for workflows created with Nextflow Workbench (see http://campagnelab.org/software/nextflow-workbench/). Reference build: ${build_number}, commit: ${reference_commit}, branch: ${reference_branch}</description>
         <version>${cloud_interactive_version}</version>
         <vendor url="http://campagnelab.org/software/nextflow-workbench/">Campagne Laboratory</vendor>
         <depends>jetbrains.mps.core</depends>
