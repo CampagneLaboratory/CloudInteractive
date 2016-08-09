@@ -95,6 +95,7 @@
         <depends>de.slisson.mps.all</depends>
         <depends>de.slisson.mps.richtext</depends>
         <depends>de.itemis.mps.selection</depends>
+        <idea-version until-build="144.1" since-build="143.1" />
         
         <extensions defaultExtensionNs="com.intellij">
           <mps.LanguageLibrary dir="/languages" />
