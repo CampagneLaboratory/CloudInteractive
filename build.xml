@@ -72,13 +72,14 @@
   
   <target name="assemble" depends="classes, declare-mps-tasks">
     <mkdir dir="${build.layout}" />
-    <mkdir dir="${build.tmp}/default/CloudInteractive.zip" />
-    <mkdir dir="${build.tmp}/default/CloudInteractive.zip/CloudInteractive" />
-    <mkdir dir="${build.tmp}/default/CloudInteractive.zip/CloudInteractive/META-INF" />
-    <echoxml file="${build.tmp}/default/CloudInteractive.zip/CloudInteractive/META-INF/plugin.xml">
+    <mkdir dir="${build.tmp}/default/CloudInteractive__dl__lbrace_cloud_interactive_version_rbrace_.zip" />
+    <mkdir dir="${build.tmp}/default/CloudInteractive__dl__lbrace_cloud_interactive_version_rbrace_.zip/CloudInteractive" />
+    <mkdir dir="${build.tmp}/default/CloudInteractive__dl__lbrace_cloud_interactive_version_rbrace_.zip/CloudInteractive/META-INF" />
+    <echoxml file="${build.tmp}/default/CloudInteractive__dl__lbrace_cloud_interactive_version_rbrace_.zip/CloudInteractive/META-INF/plugin.xml">
       <idea-plugin version="2" xmlns:xi="http://www.w3.org/2001/XInclude">
         <id>CloudInteractive</id>
         <name>org.campagnelab.CloudInteractive</name>
+        <description>The Cloud interactive is a set of languages developed with the Jetbrains MPS Language Workbench that make it easier to use Google Cloud buckets as process input for workflows created with Nextflow Workbench (see http://campagnelab.org/software/nextflow-workbench/). Reference build: ${build_number}, commit: ${reference_commit}, branch: ${reference_branch}</description>
         <version>${cloud_interactive_version}</version>
         <vendor url="http://campagnelab.org/software/nextflow-workbench/">Campagne Laboratory</vendor>
         <depends>jetbrains.mps.core</depends>
@@ -94,14 +95,15 @@
         <depends>de.slisson.mps.all</depends>
         <depends>de.slisson.mps.richtext</depends>
         <depends>de.itemis.mps.selection</depends>
+        <idea-version until-build="144.1" since-build="143.1" />
         
         <extensions defaultExtensionNs="com.intellij">
           <mps.LanguageLibrary dir="/languages" />
         </extensions>
       </idea-plugin>
     </echoxml>
-    <mkdir dir="${build.tmp}/default/CloudInteractive.zip/CloudInteractive/languages" />
-    <mkdir dir="${build.tmp}/default/CloudInteractive.zip/CloudInteractive/languages/CloudInteractive" />
+    <mkdir dir="${build.tmp}/default/CloudInteractive__dl__lbrace_cloud_interactive_version_rbrace_.zip/CloudInteractive/languages" />
+    <mkdir dir="${build.tmp}/default/CloudInteractive__dl__lbrace_cloud_interactive_version_rbrace_.zip/CloudInteractive/languages/CloudInteractive" />
     <mkdir dir="${build.tmp}/default/org.campagnelab.cloud.interactive.jar" />
     <mkdir dir="${build.tmp}/default/org.campagnelab.cloud.interactive.jar/META-INF" />
     <echoxml file="${build.tmp}/default/org.campagnelab.cloud.interactive.jar/META-INF/module.xml">
@@ -152,13 +154,13 @@
         <sources jar="org.campagnelab.cloud.interactive-src.jar" descriptor="org.campagnelab.cloud.interactive.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/CloudInteractive.zip/CloudInteractive/languages/CloudInteractive/org.campagnelab.cloud.interactive.jar" duplicate="preserve">
+    <jar destfile="${build.tmp}/default/CloudInteractive__dl__lbrace_cloud_interactive_version_rbrace_.zip/CloudInteractive/languages/CloudInteractive/org.campagnelab.cloud.interactive.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/org.campagnelab.cloud.interactive" />
       <fileset dir="${basedir}/languages/org.campagnelab.cloud.interactive" includes="icons/**, resources/**" />
       <fileset dir="${basedir}/languages/org.campagnelab.cloud.interactive/source_gen" includes="**/trace.info, **/exports" />
       <fileset dir="${build.tmp}/default/org.campagnelab.cloud.interactive.jar" />
     </jar>
-    <jar destfile="${build.tmp}/default/CloudInteractive.zip/CloudInteractive/languages/CloudInteractive/org.campagnelab.cloud.interactive-generator.jar" duplicate="preserve">
+    <jar destfile="${build.tmp}/default/CloudInteractive__dl__lbrace_cloud_interactive_version_rbrace_.zip/CloudInteractive/languages/CloudInteractive/org.campagnelab.cloud.interactive-generator.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/org.campagnelab.cloud.interactive#8404173470612884226" />
     </jar>
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-org.campagnelab.cloud.interactive-generator-template">
@@ -167,7 +169,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-org.campagnelab.cloud.interactive-models">
       <fileset dir="${basedir}/languages/org.campagnelab.cloud.interactive/models" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.tmp}/default/CloudInteractive.zip/CloudInteractive/languages/CloudInteractive/org.campagnelab.cloud.interactive-src.jar" duplicate="preserve">
+    <jar destfile="${build.tmp}/default/CloudInteractive__dl__lbrace_cloud_interactive_version_rbrace_.zip/CloudInteractive/languages/CloudInteractive/org.campagnelab.cloud.interactive-src.jar" duplicate="preserve">
       <fileset dir="${basedir}/languages/org.campagnelab.cloud.interactive/generator/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
@@ -206,13 +208,13 @@
         <sources jar="org.campagnelab.cloud.interactive.workflow-src.jar" descriptor="org.campagnelab.cloud.interactive.workflow.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/CloudInteractive.zip/CloudInteractive/languages/CloudInteractive/org.campagnelab.cloud.interactive.workflow.jar" duplicate="preserve">
+    <jar destfile="${build.tmp}/default/CloudInteractive__dl__lbrace_cloud_interactive_version_rbrace_.zip/CloudInteractive/languages/CloudInteractive/org.campagnelab.cloud.interactive.workflow.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/org.campagnelab.cloud.interactive.workflow" />
       <fileset dir="${basedir}/languages/org.campagnelab.cloud.interactive.workflow" includes="icons/**, resources/**" />
       <fileset dir="${basedir}/languages/org.campagnelab.cloud.interactive.workflow/source_gen" includes="**/trace.info, **/exports" />
       <fileset dir="${build.tmp}/default/org.campagnelab.cloud.interactive.workflow.jar" />
     </jar>
-    <jar destfile="${build.tmp}/default/CloudInteractive.zip/CloudInteractive/languages/CloudInteractive/org.campagnelab.cloud.interactive.workflow-generator.jar" duplicate="preserve">
+    <jar destfile="${build.tmp}/default/CloudInteractive__dl__lbrace_cloud_interactive_version_rbrace_.zip/CloudInteractive/languages/CloudInteractive/org.campagnelab.cloud.interactive.workflow-generator.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/org.campagnelab.cloud.interactive.workflow#6343989637686266961" />
     </jar>
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-org.campagnelab.cloud.interactive.workflow-generator-template">
@@ -221,7 +223,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-org.campagnelab.cloud.interactive.workflow-models">
       <fileset dir="${basedir}/languages/org.campagnelab.cloud.interactive.workflow/models" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.tmp}/default/CloudInteractive.zip/CloudInteractive/languages/CloudInteractive/org.campagnelab.cloud.interactive.workflow-src.jar" duplicate="preserve">
+    <jar destfile="${build.tmp}/default/CloudInteractive__dl__lbrace_cloud_interactive_version_rbrace_.zip/CloudInteractive/languages/CloudInteractive/org.campagnelab.cloud.interactive.workflow-src.jar" duplicate="preserve">
       <fileset dir="${basedir}/languages/org.campagnelab.cloud.interactive.workflow/generator/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
@@ -234,7 +236,7 @@
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-org.campagnelab.cloud.interactive.workflow-generator-template" prefix="module/generator/template" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-org.campagnelab.cloud.interactive.workflow-models" prefix="module/models" />
     </jar>
-    <zip destfile="${build.layout}/CloudInteractive.zip">
+    <zip destfile="${build.layout}/CloudInteractive_${cloud_interactive_version}.zip">
       <zipfileset file="${basedir}/languages/org.campagnelab.cloud.interactive/CloudPath-1.0.jar" prefix="CloudInteractive" />
       <zipfileset file="${basedir}/languages/org.campagnelab.cloud.interactive/CloudRename-1.jar" prefix="CloudInteractive" />
       <zipfileset file="${basedir}/languages/org.campagnelab.cloud.interactive/commons-codec-1.3.jar" prefix="CloudInteractive" />
@@ -256,7 +258,7 @@
       <zipfileset file="${basedir}/languages/org.campagnelab.cloud.interactive/jsr305-1.3.9.jar" prefix="CloudInteractive" />
       <zipfileset file="${basedir}/languages/org.campagnelab.cloud.interactive/servlet-api-2.5-20081211.jar" prefix="CloudInteractive" />
       <zipfileset file="${basedir}/languages/org.campagnelab.cloud.interactive.workflow/CloudMatcher-1.0-SNAPSHOT.jar" prefix="CloudInteractive" />
-      <fileset dir="${build.tmp}/default/CloudInteractive.zip" />
+      <fileset dir="${build.tmp}/default/CloudInteractive__dl__lbrace_cloud_interactive_version_rbrace_.zip" />
     </zip>
     <echo file="${build.layout}/build.properties">CloudInteractive.cloud_interactive_version=${cloud_interactive_version}${line.separator}CloudInteractive.build_number=${build_number}${line.separator}CloudInteractive.reference_commit=${reference_commit}${line.separator}CloudInteractive.reference_branch=${reference_branch}${line.separator}mps.build.number=${mps.build.number}${line.separator}mps.date=${mps.date}${line.separator}mps.build.vcs.number=${mps.build.vcs.number}${line.separator}mps.teamcity.buildConfName=${mps.teamcity.buildConfName}${line.separator}mps.idea.platform.build.number=${mps.idea.platform.build.number}${line.separator}mpsBootstrapCore.version=${mpsBootstrapCore.version}${line.separator}org.campagnelab.mps.UI.ui_version=${org.campagnelab.mps.UI.ui_version}${line.separator}org.campagnelab.mps.UI.build_number=${org.campagnelab.mps.UI.build_number}${line.separator}org.campagnelab.Background.background_version=${org.campagnelab.Background.background_version}${line.separator}org.campagnelab.Background.build_number=${org.campagnelab.Background.build_number}${line.separator}org.campagnelab.GobyWeb.build_number=${org.campagnelab.GobyWeb.build_number}${line.separator}org.campagnelab.GobyWeb.gobyweb_version=${org.campagnelab.GobyWeb.gobyweb_version}${line.separator}org.campagnelab.Logger.logger.version=${org.campagnelab.Logger.logger.version}${line.separator}org.campagnelab.Logger.build_number=${org.campagnelab.Logger.build_number}${line.separator}org.campagnelab.NYoSh.nyosh_version=${org.campagnelab.NYoSh.nyosh_version}${line.separator}org.campagnelab.NYoSh.build_number=${org.campagnelab.NYoSh.build_number}${line.separator}XChart.build_number=${XChart.build_number}${line.separator}XChart.reference_commit=${XChart.reference_commit}${line.separator}XChart.reference_branch=${XChart.reference_branch}${line.separator}XChart.XChart_version=${XChart.XChart_version}${line.separator}org.campagnelab.TextOutput.build_number=${org.campagnelab.TextOutput.build_number}${line.separator}org.campagnelab.TextOutput.textoutput_version=${org.campagnelab.TextOutput.textoutput_version}${line.separator}org.campagnelab.Interactive.interactive_version=${org.campagnelab.Interactive.interactive_version}${line.separator}org.campagnelab.Interactive.build_number=${org.campagnelab.Interactive.build_number}${line.separator}org.campagnelab.ClusterConfig.clusterConfig_version=${org.campagnelab.ClusterConfig.clusterConfig_version}${line.separator}org.campagnelab.ClusterConfig.build_number=${org.campagnelab.ClusterConfig.build_number}${line.separator}mps-sl-all.versionNumber=${mps-sl-all.versionNumber}${line.separator}NextflowWorkbench.workbench_version=${NextflowWorkbench.workbench_version}${line.separator}NextflowWorkbench.nextflow_version=${NextflowWorkbench.nextflow_version}${line.separator}NextflowWorkbench.build_number=${NextflowWorkbench.build_number}${line.separator}NextflowWorkbench.reference_commit=${NextflowWorkbench.reference_commit}${line.separator}NextflowWorkbench.reference_branch=${NextflowWorkbench.reference_branch}</echo>
   </target>

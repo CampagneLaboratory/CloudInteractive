@@ -20,6 +20,19 @@
     <import index="9b59" ref="r:d2c1095a-594a-4ff4-97d7-a186cca5ed85(XChart.build)" />
   </imports>
   <registry>
+    <language id="479c7a8c-02f9-43b5-9139-d910cb22f298" name="jetbrains.mps.core.xml">
+      <concept id="6666499814681541919" name="jetbrains.mps.core.xml.structure.XmlTextValue" flags="ng" index="2pMdtt">
+        <property id="6666499814681541920" name="text" index="2pMdty" />
+      </concept>
+      <concept id="6666499814681415858" name="jetbrains.mps.core.xml.structure.XmlElement" flags="ng" index="2pNNFK">
+        <property id="6666499814681415862" name="tagName" index="2pNNFO" />
+        <child id="6666499814681415861" name="attributes" index="2pNNFR" />
+      </concept>
+      <concept id="6666499814681447923" name="jetbrains.mps.core.xml.structure.XmlAttribute" flags="ng" index="2pNUuL">
+        <property id="6666499814681447926" name="attrName" index="2pNUuO" />
+        <child id="6666499814681541918" name="value" index="2pMdts" />
+      </concept>
+    </language>
     <language id="798100da-4f0a-421a-b991-71f8c50ce5d2" name="jetbrains.mps.build">
       <concept id="5481553824944787378" name="jetbrains.mps.build.structure.BuildSourceProjectRelativePath" flags="ng" index="55IIr" />
       <concept id="9126048691955220717" name="jetbrains.mps.build.structure.BuildLayout_File" flags="ng" index="28jJK3">
@@ -95,12 +108,14 @@
       </concept>
       <concept id="6592112598314498932" name="jetbrains.mps.build.mps.structure.BuildMps_IdeaPlugin" flags="ng" index="m$_wf">
         <property id="6592112598314498927" name="id" index="m$_wk" />
+        <child id="1359186315025500371" name="xml" index="20twgj" />
         <child id="7832771629084912518" name="vendor" index="2iVFfd" />
         <child id="6592112598314498931" name="version" index="m$_w8" />
         <child id="6592112598314499050" name="content" index="m$_yh" />
         <child id="6592112598314499028" name="dependencies" index="m$_yJ" />
         <child id="6592112598314499021" name="name" index="m$_yQ" />
         <child id="6592112598314855574" name="containerName" index="m_cZH" />
+        <child id="2172791612906637490" name="description" index="3s6cr7" />
       </concept>
       <concept id="6592112598314498926" name="jetbrains.mps.build.mps.structure.BuildMpsLayout_Plugin" flags="ng" index="m$_wl">
         <reference id="6592112598314801433" name="plugin" index="m_rDy" />
@@ -369,7 +384,13 @@
       <node concept="3981dG" id="GHH7Qc9CpG" role="39821P">
         <node concept="3_J27D" id="GHH7Qc9CpH" role="Nbhlr">
           <node concept="3Mxwew" id="GHH7Qc9CpI" role="3MwsjC">
-            <property role="3MwjfP" value="CloudInteractive.zip" />
+            <property role="3MwjfP" value="CloudInteractive_" />
+          </node>
+          <node concept="3Mxwey" id="GHH7Qcz2Hm" role="3MwsjC">
+            <ref role="3Mxwex" node="1EvOJKhuayt" resolve="cloud_interactive_version" />
+          </node>
+          <node concept="3Mxwew" id="GHH7Qcz2Hl" role="3MwsjC">
+            <property role="3MwjfP" value=".zip" />
           </node>
         </node>
         <node concept="m$_wl" id="GHH7Qc9CpJ" role="39821P">
@@ -652,6 +673,21 @@
     </node>
     <node concept="m$_wf" id="GHH7Qc9Cpy" role="3989C9">
       <property role="m$_wk" value="CloudInteractive" />
+      <node concept="2pNNFK" id="7ZmC9JYEfXQ" role="20twgj">
+        <property role="2pNNFO" value="idea-version" />
+        <node concept="2pNUuL" id="7ZmC9JYEfXR" role="2pNNFR">
+          <property role="2pNUuO" value="until-build" />
+          <node concept="2pMdtt" id="7ZmC9JYEfXS" role="2pMdts">
+            <property role="2pMdty" value="144.1" />
+          </node>
+        </node>
+        <node concept="2pNUuL" id="7ZmC9JYEfXT" role="2pNNFR">
+          <property role="2pNUuO" value="since-build" />
+          <node concept="2pMdtt" id="7ZmC9JYEfXU" role="2pMdts">
+            <property role="2pMdty" value="143.1" />
+          </node>
+        </node>
+      </node>
       <node concept="3_J27D" id="GHH7Qc9Cpz" role="m$_yQ">
         <node concept="3Mxwew" id="GHH7Qc9Cp$" role="3MwsjC">
           <property role="3MwjfP" value="org.campagnelab.CloudInteractive" />
@@ -712,6 +748,32 @@
       <node concept="2iUeEo" id="GHH7Qc9IT3" role="2iVFfd">
         <property role="2iUeEt" value="Campagne Laboratory" />
         <property role="2iUeEu" value="http://campagnelab.org/software/nextflow-workbench/" />
+      </node>
+      <node concept="3_J27D" id="GHH7QcyY6r" role="3s6cr7">
+        <node concept="3Mxwew" id="H0TQXNF9To" role="3MwsjC">
+          <property role="3MwjfP" value="The Cloud interactive is a set of languages developed with the Jetbrains MPS Language Workbench that make it easier to use Google Cloud buckets as process input for workflows created with Nextflow Workbench" />
+        </node>
+        <node concept="3Mxwew" id="1EvOJKhulyD" role="3MwsjC">
+          <property role="3MwjfP" value=" (see http://campagnelab.org/software/nextflow-workbench/)" />
+        </node>
+        <node concept="3Mxwew" id="1EvOJKhul8h" role="3MwsjC">
+          <property role="3MwjfP" value=". Reference build: " />
+        </node>
+        <node concept="3Mxwey" id="4RSqyaA4csT" role="3MwsjC">
+          <ref role="3Mxwex" node="4RSqyaA4c2V" resolve="build_number" />
+        </node>
+        <node concept="3Mxwew" id="5OPtsOYwok" role="3MwsjC">
+          <property role="3MwjfP" value=", commit: " />
+        </node>
+        <node concept="3Mxwey" id="5OPtsOYwoW" role="3MwsjC">
+          <ref role="3Mxwex" node="4RSqyaA6FWL" resolve="reference_commit" />
+        </node>
+        <node concept="3Mxwew" id="5OPtsOYwq4" role="3MwsjC">
+          <property role="3MwjfP" value=", branch: " />
+        </node>
+        <node concept="3Mxwey" id="5OPtsOYwqL" role="3MwsjC">
+          <ref role="3Mxwex" node="4RSqyaA6G6g" resolve="reference_branch" />
+        </node>
       </node>
     </node>
     <node concept="2G$12M" id="GHH7Qc9Cpx" role="3989C9">
