@@ -6,7 +6,7 @@
   <property name="build.layout" location="${build.dir}/artifacts/CloudInteractive" />
   <property name="org.campagnelab.goby.workbench.home" location="${basedir}/../NYoSh" />
   <property name="mps_home" location="" />
-  <property name="cloud_interactie_version" value="1.0" />
+  <property name="cloud_interactive_version" value="1.0" />
   <property name="mps-richtext.location" location="${basedir}/.." />
   <property name="org.campagnelab.xchart.home" location="${basedir}/../XChart" />
   <property name="artifacts.mps" location="${mps_home}" />
@@ -79,7 +79,7 @@
       <idea-plugin version="2" xmlns:xi="http://www.w3.org/2001/XInclude">
         <id>CloudInteractive</id>
         <name>org.campagnelab.CloudInteractive</name>
-        <version>${cloud_interactie_version}</version>
+        <version>${cloud_interactive_version}</version>
         <vendor url="http://campagnelab.org/software/nextflow-workbench/">Campagne Laboratory</vendor>
         <depends>jetbrains.mps.core</depends>
         <depends>org.campagnelab.mps.UI</depends>
@@ -139,7 +139,6 @@
         <library jar="../../google-oauth-client-java6-1.21.0.jar" />
         <library jar="../../google-oauth-client-jetty-1.21.0.jar" />
         <library jar="../../guava-jdk5-13.0.jar" />
-        <library jar="../../gwt-user-1.6.4.jar" />
         <library jar="../../hamcrest-core-1.3.jar" />
         <library jar="../../httpclient-4.0.1.jar" />
         <library jar="../../httpcore-4.0.1.jar" />
@@ -194,6 +193,7 @@
           <module ref="9b80526e-f0bf-4992-bdf5-cee39c1833f3(collections.runtime)" />
           <module ref="dc038ceb-b7ea-4fea-ac12-55f7400e97ba(de.slisson.mps.editor.multiline.runtime)" />
           <module ref="a3e4657f-a76c-45bb-bbda-c764596ecc65(jetbrains.mps.baseLanguage.logging.runtime)" />
+          <module ref="23949432-aaff-4c03-b7da-26e4e956ccea(jetbrains.mps.baseLanguage.regexp.runtime)" />
           <module ref="d44dab97-aaac-44cb-9745-8a14db674c03(jetbrains.mps.baseLanguage.tuples.runtime)" />
           <module ref="2af156ab-65c1-4a62-bd0d-ea734f71eab6(jetbrains.mps.dataFlow.runtime)" />
           <module ref="34e84b8f-afa8-4364-abcd-a279fddddbe7(jetbrains.mps.editor.runtime)" />
@@ -203,8 +203,6 @@
           <module ref="9a4afe51-f114-4595-b5df-048ce3c596be(jetbrains.mps.runtime)" />
         </dependencies>
         <library jar="../../CloudMatcher-1.0-SNAPSHOT.jar" />
-        <library jar="../../ant-1.8.2.jar" />
-        <library jar="../../ant-launcher-1.8.2.jar" />
         <sources jar="org.campagnelab.cloud.interactive.workflow-src.jar" descriptor="org.campagnelab.cloud.interactive.workflow.mpl" />
       </module>
     </echoxml>
@@ -249,7 +247,6 @@
       <zipfileset file="${basedir}/languages/org.campagnelab.cloud.interactive/google-oauth-client-java6-1.21.0.jar" prefix="CloudInteractive" />
       <zipfileset file="${basedir}/languages/org.campagnelab.cloud.interactive/google-oauth-client-jetty-1.21.0.jar" prefix="CloudInteractive" />
       <zipfileset file="${basedir}/languages/org.campagnelab.cloud.interactive/guava-jdk5-13.0.jar" prefix="CloudInteractive" />
-      <zipfileset file="${basedir}/languages/org.campagnelab.cloud.interactive/gwt-user-1.6.4.jar" prefix="CloudInteractive" />
       <zipfileset file="${basedir}/languages/org.campagnelab.cloud.interactive/hamcrest-core-1.3.jar" prefix="CloudInteractive" />
       <zipfileset file="${basedir}/languages/org.campagnelab.cloud.interactive/httpclient-4.0.1.jar" prefix="CloudInteractive" />
       <zipfileset file="${basedir}/languages/org.campagnelab.cloud.interactive/httpcore-4.0.1.jar" prefix="CloudInteractive" />
@@ -259,11 +256,9 @@
       <zipfileset file="${basedir}/languages/org.campagnelab.cloud.interactive/jsr305-1.3.9.jar" prefix="CloudInteractive" />
       <zipfileset file="${basedir}/languages/org.campagnelab.cloud.interactive/servlet-api-2.5-20081211.jar" prefix="CloudInteractive" />
       <zipfileset file="${basedir}/languages/org.campagnelab.cloud.interactive.workflow/CloudMatcher-1.0-SNAPSHOT.jar" prefix="CloudInteractive" />
-      <zipfileset file="${basedir}/languages/org.campagnelab.cloud.interactive.workflow/ant-launcher-1.8.2.jar" prefix="CloudInteractive" />
-      <zipfileset file="${basedir}/languages/org.campagnelab.cloud.interactive.workflow/ant-1.8.2.jar" prefix="CloudInteractive" />
       <fileset dir="${build.tmp}/default/CloudInteractive.zip" />
     </zip>
-    <echo file="${build.layout}/build.properties">CloudInteractive.cloud_interactie_version=${cloud_interactie_version}${line.separator}CloudInteractive.build_number=${build_number}${line.separator}CloudInteractive.reference_commit=${reference_commit}${line.separator}CloudInteractive.reference_branch=${reference_branch}${line.separator}mps.build.number=${mps.build.number}${line.separator}mps.date=${mps.date}${line.separator}mps.build.vcs.number=${mps.build.vcs.number}${line.separator}mps.teamcity.buildConfName=${mps.teamcity.buildConfName}${line.separator}mps.idea.platform.build.number=${mps.idea.platform.build.number}${line.separator}mpsBootstrapCore.version=${mpsBootstrapCore.version}${line.separator}org.campagnelab.mps.UI.ui_version=${org.campagnelab.mps.UI.ui_version}${line.separator}org.campagnelab.mps.UI.build_number=${org.campagnelab.mps.UI.build_number}${line.separator}org.campagnelab.Background.background_version=${org.campagnelab.Background.background_version}${line.separator}org.campagnelab.Background.build_number=${org.campagnelab.Background.build_number}${line.separator}org.campagnelab.GobyWeb.build_number=${org.campagnelab.GobyWeb.build_number}${line.separator}org.campagnelab.GobyWeb.gobyweb_version=${org.campagnelab.GobyWeb.gobyweb_version}${line.separator}org.campagnelab.Logger.logger.version=${org.campagnelab.Logger.logger.version}${line.separator}org.campagnelab.Logger.build_number=${org.campagnelab.Logger.build_number}${line.separator}org.campagnelab.NYoSh.nyosh_version=${org.campagnelab.NYoSh.nyosh_version}${line.separator}org.campagnelab.NYoSh.build_number=${org.campagnelab.NYoSh.build_number}${line.separator}XChart.build_number=${XChart.build_number}${line.separator}XChart.reference_commit=${XChart.reference_commit}${line.separator}XChart.reference_branch=${XChart.reference_branch}${line.separator}XChart.XChart_version=${XChart.XChart_version}${line.separator}org.campagnelab.TextOutput.build_number=${org.campagnelab.TextOutput.build_number}${line.separator}org.campagnelab.TextOutput.textoutput_version=${org.campagnelab.TextOutput.textoutput_version}${line.separator}org.campagnelab.Interactive.interactive_version=${org.campagnelab.Interactive.interactive_version}${line.separator}org.campagnelab.Interactive.build_number=${org.campagnelab.Interactive.build_number}${line.separator}org.campagnelab.ClusterConfig.clusterConfig_version=${org.campagnelab.ClusterConfig.clusterConfig_version}${line.separator}org.campagnelab.ClusterConfig.build_number=${org.campagnelab.ClusterConfig.build_number}${line.separator}mps-sl-all.versionNumber=${mps-sl-all.versionNumber}${line.separator}NextflowWorkbench.workbench_version=${NextflowWorkbench.workbench_version}${line.separator}NextflowWorkbench.nextflow_version=${NextflowWorkbench.nextflow_version}${line.separator}NextflowWorkbench.build_number=${NextflowWorkbench.build_number}${line.separator}NextflowWorkbench.reference_commit=${NextflowWorkbench.reference_commit}${line.separator}NextflowWorkbench.reference_branch=${NextflowWorkbench.reference_branch}</echo>
+    <echo file="${build.layout}/build.properties">CloudInteractive.cloud_interactive_version=${cloud_interactive_version}${line.separator}CloudInteractive.build_number=${build_number}${line.separator}CloudInteractive.reference_commit=${reference_commit}${line.separator}CloudInteractive.reference_branch=${reference_branch}${line.separator}mps.build.number=${mps.build.number}${line.separator}mps.date=${mps.date}${line.separator}mps.build.vcs.number=${mps.build.vcs.number}${line.separator}mps.teamcity.buildConfName=${mps.teamcity.buildConfName}${line.separator}mps.idea.platform.build.number=${mps.idea.platform.build.number}${line.separator}mpsBootstrapCore.version=${mpsBootstrapCore.version}${line.separator}org.campagnelab.mps.UI.ui_version=${org.campagnelab.mps.UI.ui_version}${line.separator}org.campagnelab.mps.UI.build_number=${org.campagnelab.mps.UI.build_number}${line.separator}org.campagnelab.Background.background_version=${org.campagnelab.Background.background_version}${line.separator}org.campagnelab.Background.build_number=${org.campagnelab.Background.build_number}${line.separator}org.campagnelab.GobyWeb.build_number=${org.campagnelab.GobyWeb.build_number}${line.separator}org.campagnelab.GobyWeb.gobyweb_version=${org.campagnelab.GobyWeb.gobyweb_version}${line.separator}org.campagnelab.Logger.logger.version=${org.campagnelab.Logger.logger.version}${line.separator}org.campagnelab.Logger.build_number=${org.campagnelab.Logger.build_number}${line.separator}org.campagnelab.NYoSh.nyosh_version=${org.campagnelab.NYoSh.nyosh_version}${line.separator}org.campagnelab.NYoSh.build_number=${org.campagnelab.NYoSh.build_number}${line.separator}XChart.build_number=${XChart.build_number}${line.separator}XChart.reference_commit=${XChart.reference_commit}${line.separator}XChart.reference_branch=${XChart.reference_branch}${line.separator}XChart.XChart_version=${XChart.XChart_version}${line.separator}org.campagnelab.TextOutput.build_number=${org.campagnelab.TextOutput.build_number}${line.separator}org.campagnelab.TextOutput.textoutput_version=${org.campagnelab.TextOutput.textoutput_version}${line.separator}org.campagnelab.Interactive.interactive_version=${org.campagnelab.Interactive.interactive_version}${line.separator}org.campagnelab.Interactive.build_number=${org.campagnelab.Interactive.build_number}${line.separator}org.campagnelab.ClusterConfig.clusterConfig_version=${org.campagnelab.ClusterConfig.clusterConfig_version}${line.separator}org.campagnelab.ClusterConfig.build_number=${org.campagnelab.ClusterConfig.build_number}${line.separator}mps-sl-all.versionNumber=${mps-sl-all.versionNumber}${line.separator}NextflowWorkbench.workbench_version=${NextflowWorkbench.workbench_version}${line.separator}NextflowWorkbench.nextflow_version=${NextflowWorkbench.nextflow_version}${line.separator}NextflowWorkbench.build_number=${NextflowWorkbench.build_number}${line.separator}NextflowWorkbench.reference_commit=${NextflowWorkbench.reference_commit}${line.separator}NextflowWorkbench.reference_branch=${NextflowWorkbench.reference_branch}</echo>
   </target>
   
   <target name="buildDependents">
@@ -526,7 +521,6 @@
         <fileset file="${basedir}/languages/org.campagnelab.cloud.interactive/google-oauth-client-java6-1.21.0.jar" />
         <fileset file="${basedir}/languages/org.campagnelab.cloud.interactive/google-oauth-client-jetty-1.21.0.jar" />
         <fileset file="${basedir}/languages/org.campagnelab.cloud.interactive/guava-jdk5-13.0.jar" />
-        <fileset file="${basedir}/languages/org.campagnelab.cloud.interactive/gwt-user-1.6.4.jar" />
         <fileset file="${basedir}/languages/org.campagnelab.cloud.interactive/hamcrest-core-1.3.jar" />
         <fileset file="${basedir}/languages/org.campagnelab.cloud.interactive/httpclient-4.0.1.jar" />
         <fileset file="${basedir}/languages/org.campagnelab.cloud.interactive/httpcore-4.0.1.jar" />
@@ -538,8 +532,6 @@
         <fileset file="${basedir}/languages/org.campagnelab.cloud.interactive/CloudRename-1.jar" />
         <fileset file="${basedir}/languages/org.campagnelab.cloud.interactive/CloudPath-1.0.jar" />
         <fileset file="${basedir}/languages/org.campagnelab.cloud.interactive.workflow/CloudMatcher-1.0-SNAPSHOT.jar" />
-        <fileset file="${basedir}/languages/org.campagnelab.cloud.interactive.workflow/ant-1.8.2.jar" />
-        <fileset file="${basedir}/languages/org.campagnelab.cloud.interactive.workflow/ant-launcher-1.8.2.jar" />
         <fileset file="${build.tmp}/deps/NextflowWorkbench/NextflowWorkbench__dl__lbrace_workbench_version_rbrace_.zip/NextflowWorkbench/iconloader.jar" />
         <fileset file="${artifacts.mps}/lib/log4j.jar" />
         <fileset file="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/mps-multiline/lib/diff_match_patch.jar" />
@@ -582,6 +574,8 @@
         <fileset file="${build.tmp}/deps/NextflowWorkbench/NextflowWorkbench__dl__lbrace_workbench_version_rbrace_.zip/NextflowWorkbench/languages/NextflowWorkbench/org.campagnelab.util.files.jar" />
         <fileset file="${build.tmp}/deps/NextflowWorkbench/NextflowWorkbench__dl__lbrace_workbench_version_rbrace_.zip/NextflowWorkbench/languages/NextflowWorkbench/org.campagnelab.workflow.jar" />
         <fileset file="${build.tmp}/deps/NextflowWorkbench/NextflowWorkbench__dl__lbrace_workbench_version_rbrace_.zip/NextflowWorkbench/languages/NextflowWorkbench/org.campagnelab.workflow.configuration.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.regexp.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.regexp.runtime.jar" />
       </classpath>
     </javac>
   </target>
@@ -619,7 +613,6 @@
         <fileset file="${basedir}/languages/org.campagnelab.cloud.interactive/google-oauth-client-java6-1.21.0.jar" />
         <fileset file="${basedir}/languages/org.campagnelab.cloud.interactive/google-oauth-client-jetty-1.21.0.jar" />
         <fileset file="${basedir}/languages/org.campagnelab.cloud.interactive/guava-jdk5-13.0.jar" />
-        <fileset file="${basedir}/languages/org.campagnelab.cloud.interactive/gwt-user-1.6.4.jar" />
         <fileset file="${basedir}/languages/org.campagnelab.cloud.interactive/hamcrest-core-1.3.jar" />
         <fileset file="${basedir}/languages/org.campagnelab.cloud.interactive/httpclient-4.0.1.jar" />
         <fileset file="${basedir}/languages/org.campagnelab.cloud.interactive/httpcore-4.0.1.jar" />
@@ -631,8 +624,6 @@
         <fileset file="${basedir}/languages/org.campagnelab.cloud.interactive/CloudRename-1.jar" />
         <fileset file="${basedir}/languages/org.campagnelab.cloud.interactive/CloudPath-1.0.jar" />
         <fileset file="${basedir}/languages/org.campagnelab.cloud.interactive.workflow/CloudMatcher-1.0-SNAPSHOT.jar" />
-        <fileset file="${basedir}/languages/org.campagnelab.cloud.interactive.workflow/ant-1.8.2.jar" />
-        <fileset file="${basedir}/languages/org.campagnelab.cloud.interactive.workflow/ant-launcher-1.8.2.jar" />
         <fileset file="${build.tmp}/deps/NextflowWorkbench/NextflowWorkbench__dl__lbrace_workbench_version_rbrace_.zip/NextflowWorkbench/iconloader.jar" />
         <fileset file="${artifacts.mps}/lib/log4j.jar" />
         <fileset file="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/mps-multiline/lib/diff_match_patch.jar" />
@@ -714,7 +705,6 @@
         <fileset file="${basedir}/languages/org.campagnelab.cloud.interactive/google-oauth-client-java6-1.21.0.jar" />
         <fileset file="${basedir}/languages/org.campagnelab.cloud.interactive/google-oauth-client-jetty-1.21.0.jar" />
         <fileset file="${basedir}/languages/org.campagnelab.cloud.interactive/guava-jdk5-13.0.jar" />
-        <fileset file="${basedir}/languages/org.campagnelab.cloud.interactive/gwt-user-1.6.4.jar" />
         <fileset file="${basedir}/languages/org.campagnelab.cloud.interactive/hamcrest-core-1.3.jar" />
         <fileset file="${basedir}/languages/org.campagnelab.cloud.interactive/httpclient-4.0.1.jar" />
         <fileset file="${basedir}/languages/org.campagnelab.cloud.interactive/httpcore-4.0.1.jar" />
@@ -796,7 +786,6 @@
         <fileset file="${basedir}/languages/org.campagnelab.cloud.interactive/google-oauth-client-java6-1.21.0.jar" />
         <fileset file="${basedir}/languages/org.campagnelab.cloud.interactive/google-oauth-client-jetty-1.21.0.jar" />
         <fileset file="${basedir}/languages/org.campagnelab.cloud.interactive/guava-jdk5-13.0.jar" />
-        <fileset file="${basedir}/languages/org.campagnelab.cloud.interactive/gwt-user-1.6.4.jar" />
         <fileset file="${basedir}/languages/org.campagnelab.cloud.interactive/hamcrest-core-1.3.jar" />
         <fileset file="${basedir}/languages/org.campagnelab.cloud.interactive/httpclient-4.0.1.jar" />
         <fileset file="${basedir}/languages/org.campagnelab.cloud.interactive/httpcore-4.0.1.jar" />
@@ -808,8 +797,6 @@
         <fileset file="${basedir}/languages/org.campagnelab.cloud.interactive/CloudRename-1.jar" />
         <fileset file="${basedir}/languages/org.campagnelab.cloud.interactive/CloudPath-1.0.jar" />
         <fileset file="${basedir}/languages/org.campagnelab.cloud.interactive.workflow/CloudMatcher-1.0-SNAPSHOT.jar" />
-        <fileset file="${basedir}/languages/org.campagnelab.cloud.interactive.workflow/ant-1.8.2.jar" />
-        <fileset file="${basedir}/languages/org.campagnelab.cloud.interactive.workflow/ant-launcher-1.8.2.jar" />
         <fileset file="${build.tmp}/deps/NextflowWorkbench/NextflowWorkbench__dl__lbrace_workbench_version_rbrace_.zip/NextflowWorkbench/iconloader.jar" />
         <fileset file="${artifacts.mps}/lib/log4j.jar" />
         <fileset file="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/mps-multiline/lib/diff_match_patch.jar" />
@@ -831,6 +818,8 @@
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.classifiers.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.closures.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.collections.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.regexp.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.regexp.runtime.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.scopes.jar" />
         <fileset file="${artifacts.mps}/languages/util/jetbrains.mps.execution.util.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.actions.jar" />
@@ -876,8 +865,6 @@
         <fileset file="${artifacts.mps}/lib/mps-platform.jar" />
         <pathelement path="${build.tmp}/java/out/org.campagnelab.cloud.interactive.workflow" />
         <fileset file="${basedir}/languages/org.campagnelab.cloud.interactive.workflow/CloudMatcher-1.0-SNAPSHOT.jar" />
-        <fileset file="${basedir}/languages/org.campagnelab.cloud.interactive.workflow/ant-1.8.2.jar" />
-        <fileset file="${basedir}/languages/org.campagnelab.cloud.interactive.workflow/ant-launcher-1.8.2.jar" />
         <fileset file="${build.tmp}/deps/NextflowWorkbench/NextflowWorkbench__dl__lbrace_workbench_version_rbrace_.zip/NextflowWorkbench/iconloader.jar" />
         <fileset file="${artifacts.mps}/lib/log4j.jar" />
         <fileset file="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/mps-multiline/lib/diff_match_patch.jar" />
